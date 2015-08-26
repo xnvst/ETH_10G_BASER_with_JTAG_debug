@@ -1,0 +1,31 @@
+# system info avalon_sysctrl on 2014.11.09.00:47:09
+system_info:
+name,value
+DEVICE,5ASTMD3E3F31I3
+DEVICE_FAMILY,Arria V
+GENERATION_ID,1415512026
+#
+#
+# Files generated for avalon_sysctrl on 2014.11.09.00:47:09
+files:
+filepath,kind,attributes,module,is_top
+simulation/avalon_sysctrl.v,VERILOG,,avalon_sysctrl,true
+simulation/submodules/altera_avalon_mm_bridge.v,VERILOG,,altera_avalon_mm_bridge,false
+simulation/submodules/avalon_sysctrl_onchip_memory2_0.hex,HEX,,avalon_sysctrl_onchip_memory2_0,false
+simulation/submodules/avalon_sysctrl_onchip_memory2_0.v,VERILOG,,avalon_sysctrl_onchip_memory2_0,false
+simulation/submodules/avalon_sysctrl_mm_interconnect_0.v,VERILOG,,avalon_sysctrl_mm_interconnect_0,false
+simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
+simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
+simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
+simulation/submodules/altera_merlin_master_translator.sv,SYSTEM_VERILOG,,altera_merlin_master_translator,false
+simulation/submodules/altera_merlin_slave_translator.sv,SYSTEM_VERILOG,,altera_merlin_slave_translator,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+avalon_sysctrl.mm_bridge,altera_avalon_mm_bridge
+avalon_sysctrl.onchip_memory2_0,avalon_sysctrl_onchip_memory2_0
+avalon_sysctrl.mm_interconnect_0,avalon_sysctrl_mm_interconnect_0
+avalon_sysctrl.mm_interconnect_0.mm_bridge_m0_translator,altera_merlin_master_translator
+avalon_sysctrl.mm_interconnect_0.onchip_memory2_0_s1_translator,altera_merlin_slave_translator
+avalon_sysctrl.rst_controller,altera_reset_controller

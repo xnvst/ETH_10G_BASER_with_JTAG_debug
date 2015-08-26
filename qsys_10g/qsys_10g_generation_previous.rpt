@@ -1,0 +1,714 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory=D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest --output-directory=D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\simulation --file-set=SIM_VERILOG --report-file=html:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\qsys_10g.html --report-file=sopcinfo:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g.sopcinfo --report-file=csv:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\qsys_10g.csv --report-file=spd:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\qsys_10g.spd --report-file=cmp:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\qsys_10g.cmp --report-file=sip:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\simulation\qsys_10g.sip --system-info=DEVICE_FAMILY="Arria V" --system-info=DEVICE=5ASTFD5K3F40I3ES --system-info=DEVICE_SPEEDGRADE=3_H3 --component-file=D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g.qsys
+Progress: Loading ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g.qsys
+Progress: Reading input file
+Progress: Adding clk [clock_source 14.0]
+Progress: Parameterizing module clk
+Progress: Adding bfm_master [altera_avalon_mm_master_bfm 14.0]
+Progress: Parameterizing module bfm_master
+Progress: Adding jtag_master [altera_jtag_avalon_master 14.0]
+Progress: Parameterizing module jtag_master
+Progress: Adding led_pio [altera_avalon_pio 14.0]
+Progress: Parameterizing module led_pio
+Progress: Adding button_pio [altera_avalon_pio 14.0]
+Progress: Parameterizing module button_pio
+Progress: Adding onchip_ram [altera_avalon_onchip_memory2 14.0]
+Progress: Parameterizing module onchip_ram
+Progress: Adding eth_10g_design_example_0 [altera_eth_10g_design_example 14.0]
+Progress: Parameterizing module eth_10g_design_example_0
+Progress: Adding mm_bridge [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: qsys_10g.clk: The input clock frequency must be known or set by the parent if this is a subsystem.
+Info: qsys_10g.eth_10g_design_example_0.eth_10g_design_example_0: There are recommended upgrades for: altera_10gbaser, eth_10g_mac
+Info: qsys_10g.eth_10g_design_example_0.altera_10gbaser: PHY IP will require 2 reconfiguration interfaces for connection to the external reconfiguration controller.
+Info: qsys_10g.eth_10g_design_example_0.altera_10gbaser: Reconfiguration interface offset  0 is connected to the transceiver channel .
+Info: qsys_10g.eth_10g_design_example_0.altera_10gbaser: Reconfiguration interface offset  1 is connected to the transmit PLL .
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser.xgmii_rx_dc_0: Interface must have an associated reset
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser.xgmii_tx_dc_0: Interface must have an associated reset
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser: altera_10gbaser.xgmii_rx_clk cannot be both connected and exported
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser.xgmii_rx_dc_0: altera_10gbaser.xgmii_rx_dc_0 does not have an associated reset
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser.xgmii_tx_dc_0: altera_10gbaser.xgmii_tx_dc_0 does not have an associated reset
+Warning: qsys_10g.clk.clk/eth_10g_design_example_0.mm_clk: eth_10g_design_example_0.mm_clk requires 156250000Hz, but source has frequency of 0Hz
+Warning: qsys_10g.eth_10g_design_example_0: eth_10g_design_example_0.reconfig_to_xcvr must be exported, or connected to a matching conduit.
+Warning: qsys_10g.eth_10g_design_example_0: eth_10g_design_example_0.reconfig_from_xcvr must be exported, or connected to a matching conduit.
+Warning: qsys_10g.eth_10g_design_example_0: eth_10g_design_example_0.rx_data_ready must be exported, or connected to a matching conduit.
+Info: qsys_10g: Generating qsys_10g "qsys_10g" for SIM_VERILOG
+Info: Interconnect is inserted between master mm_bridge.m0 and slave eth_10g_design_example_0.mm_pipeline_bridge because the master has readdatavalid signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master mm_bridge.m0 and slave eth_10g_design_example_0.mm_pipeline_bridge because the master has burstcount signal 4 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master mm_bridge.m0 and slave eth_10g_design_example_0.mm_pipeline_bridge because the master has address signal 24 bit wide, but the slave is 19 bit wide.
+Info: Interconnect is inserted between master mm_bridge.m0 and slave eth_10g_design_example_0.mm_pipeline_bridge because the master has byteenable signal 4 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master mm_bridge.m0 and slave eth_10g_design_example_0.mm_pipeline_bridge because the master has debugaccess signal 1 bit wide, but the slave is 0 bit wide.
+Info: Inserting clock-crossing logic between cmd_demux.src3 and cmd_mux_003.sink0
+Info: Inserting clock-crossing logic between cmd_demux.src4 and cmd_mux_004.sink0
+Info: Inserting clock-crossing logic between rsp_demux_003.src0 and rsp_mux.sink3
+Info: Inserting clock-crossing logic between rsp_demux_004.src0 and rsp_mux.sink4
+Info: eth_10g_design_example_0: "qsys_10g" instantiated altera_eth_10g_design_example "eth_10g_design_example_0"
+Info: mm_bridge: "qsys_10g" instantiated altera_avalon_mm_bridge "mm_bridge"
+Info: mm_interconnect_0: "qsys_10g" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "qsys_10g" instantiated altera_reset_controller "rst_controller"
+Info: altera_avalon_mm_bridge: "eth_10g_design_example_0" instantiated altera_merlin_master_translator "altera_avalon_mm_bridge"
+Info: altera_10gbaser: add_fileset_file ./altera_xcvr_functions.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/altera_xcvr_functions.sv
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_xcvr_functions.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/altera_xcvr_functions.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./alt_reset_ctrl_lego.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_reset_ctrl_lego.sv
+Info: altera_10gbaser: add_fileset_file ./alt_reset_ctrl_tgx_cdrauto.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_reset_ctrl_tgx_cdrauto.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_resync.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_resync.sv
+Info: altera_10gbaser: add_fileset_file ./mentor/alt_reset_ctrl_lego.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/ctrl/alt_reset_ctrl_lego.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/alt_reset_ctrl_tgx_cdrauto.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/ctrl/alt_reset_ctrl_tgx_cdrauto.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/alt_xcvr_resync.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/ctrl/alt_xcvr_resync.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_csr_common_h.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_common_h.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_csr_common.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_common.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_csr_pcs8g_h.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_pcs8g_h.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_csr_pcs8g.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_pcs8g.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_csr_selector.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_selector.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_mgmt2dec.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_mgmt2dec.sv
+Info: altera_10gbaser: add_fileset_file ./altera_wait_generate.v VERILOG PATH ../../altera_xcvr_generic/ctrl/altera_wait_generate.v
+Info: altera_10gbaser: add_fileset_file ./mentor/alt_xcvr_csr_common_h.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/ctrl/alt_xcvr_csr_common_h.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/alt_xcvr_csr_common.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/ctrl/alt_xcvr_csr_common.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/alt_xcvr_csr_pcs8g_h.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/ctrl/alt_xcvr_csr_pcs8g_h.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/alt_xcvr_csr_pcs8g.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/ctrl/alt_xcvr_csr_pcs8g.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/alt_xcvr_csr_selector.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/ctrl/alt_xcvr_csr_selector.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/alt_xcvr_mgmt2dec.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/ctrl/alt_xcvr_mgmt2dec.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_wait_generate.v VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/ctrl/altera_wait_generate.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./altera_avalon_st_handshake_clock_crosser.v VERILOG PATH ../../avalon_st/altera_avalon_st_handshake_clock_crosser/altera_avalon_st_handshake_clock_crosser.v
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_avalon_st_handshake_clock_crosser.v VERILOG_ENCRYPT PATH ../../avalon_st/altera_avalon_st_handshake_clock_crosser/mentor/altera_avalon_st_handshake_clock_crosser.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./altera_avalon_st_clock_crosser.v VERILOG PATH ../../avalon_st/altera_avalon_st_handshake_clock_crosser/altera_avalon_st_clock_crosser.v
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_avalon_st_clock_crosser.v VERILOG_ENCRYPT PATH ../../avalon_st/altera_avalon_st_handshake_clock_crosser/mentor/altera_avalon_st_clock_crosser.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./altera_avalon_st_pipeline_stage.sv SYSTEM_VERILOG PATH ../../avalon_st/altera_avalon_st_pipeline_stage/altera_avalon_st_pipeline_stage.sv
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_avalon_st_pipeline_stage.sv SYSTEM_VERILOG_ENCRYPT PATH ../../avalon_st/altera_avalon_st_pipeline_stage/mentor/altera_avalon_st_pipeline_stage.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./altera_avalon_st_pipeline_base.v VERILOG PATH ../../avalon_st/altera_avalon_st_pipeline_stage/altera_avalon_st_pipeline_base.v
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_avalon_st_pipeline_base.v VERILOG_ENCRYPT PATH ../../avalon_st/altera_avalon_st_pipeline_stage/mentor/altera_avalon_st_pipeline_base.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/alt_10gbaser_pcs.v VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/alt_10gbaser_pcs.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_params.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_params.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_async_fifo_fpga.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_async_fifo_fpga.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_bitsync.v VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_bitsync.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_bitsync2.v VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_bitsync2.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_clockcomp.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_clockcomp.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_clk_ctrl.v VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_clk_ctrl.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_gearbox_exp.v VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_gearbox_exp.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_gearbox_red.v VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_gearbox_red.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_pcs_10g.v VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_pcs_10g.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_pcs_10g_top.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_pcs_10g_top.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_reg_map_av.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_reg_map_av.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_rx_fifo.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_rx_fifo.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_rx_fifo_wrap.v VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_rx_fifo_wrap.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_rx_top.v VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_rx_top.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_tx_top.v VERILOG_ENCRYPT PATH ../av_soft_pcs/mentor/altera_10gbaser_phy_tx_top.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/alt_10gbaser_pcs.v VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/alt_10gbaser_pcs.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_params.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_params.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_async_fifo_fpga.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_async_fifo_fpga.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_bitsync.v VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_bitsync.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_bitsync2.v VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_bitsync2.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_clockcomp.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_clockcomp.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_clk_ctrl.v VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_clk_ctrl.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_gearbox_exp.v VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_gearbox_exp.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_gearbox_red.v VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_gearbox_red.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_pcs_10g.v VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_pcs_10g.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_pcs_10g_top.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_pcs_10g_top.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_reg_map_av.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_reg_map_av.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_rx_fifo.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_rx_fifo.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_rx_fifo_wrap.v VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_rx_fifo_wrap.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_rx_top.v VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_rx_top.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_tx_top.v VERILOG_ENCRYPT PATH ../av_soft_pcs/aldec/altera_10gbaser_phy_tx_top.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_1588_latency.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_1588_latency.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_ber.v VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_ber.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_ber_cnt_ns.v VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_ber_cnt_ns.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_ber_sm.v VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_ber_sm.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_blksync.v VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_blksync.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_blksync_datapath.v VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_blksync_datapath.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_decode.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_decode.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_decode_type.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_decode_type.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_descramble.v VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_descramble.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_encode.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_encode.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_encode_type.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_encode_type.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_lock_sm.v VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_lock_sm.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_nto1mux.v VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_nto1mux.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_prbs_gen_xg.v VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_prbs_gen_xg.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_prbs_ver_xg.v VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_prbs_ver_xg.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_random_err_cnt_ns.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_random_err_cnt_ns.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_random_gen.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_random_gen.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_random_ver.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_random_ver.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_random_ver_10g.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_random_ver_10g.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_register_with_byte_enable.v VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_register_with_byte_enable.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_rx_sm_datapath.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_rx_sm_datapath.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_rx_sm_ns.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_rx_sm_ns.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_scramble.v VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_scramble.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_square_wave_gen.v VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_square_wave_gen.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_tx_sm_datapath.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_tx_sm_datapath.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_tx_sm_ns.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_tx_sm_ns.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_10gbaser_phy_word_align.v VERILOG_ENCRYPT PATH ../soft_pcs/mentor/altera_10gbaser_phy_word_align.v MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_1588_latency.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_1588_latency.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_ber.v VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_ber.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_ber_cnt_ns.v VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_ber_cnt_ns.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_ber_sm.v VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_ber_sm.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_blksync.v VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_blksync.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_blksync_datapath.v VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_blksync_datapath.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_decode.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_decode.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_decode_type.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_decode_type.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_descramble.v VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_descramble.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_encode.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_encode.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_encode_type.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_encode_type.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_lock_sm.v VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_lock_sm.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_nto1mux.v VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_nto1mux.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_prbs_gen_xg.v VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_prbs_gen_xg.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_prbs_ver_xg.v VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_prbs_ver_xg.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_random_err_cnt_ns.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_random_err_cnt_ns.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_random_gen.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_random_gen.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_random_ver.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_random_ver.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_random_ver_10g.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_random_ver_10g.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_register_with_byte_enable.v VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_register_with_byte_enable.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_rx_sm_datapath.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_rx_sm_datapath.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_rx_sm_ns.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_rx_sm_ns.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_scramble.v VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_scramble.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_square_wave_gen.v VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_square_wave_gen.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_tx_sm_datapath.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_tx_sm_datapath.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_tx_sm_ns.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_tx_sm_ns.sv ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./aldec/altera_10gbaser_phy_word_align.v VERILOG_ENCRYPT PATH ../soft_pcs/aldec/altera_10gbaser_phy_word_align.v ALDEC_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./csr_pcs10gbaser_h.sv SYSTEM_VERILOG PATH ../siv/csr_pcs10gbaser_h.sv
+Info: altera_10gbaser: add_fileset_file ./csr_pcs10gbaser.sv SYSTEM_VERILOG PATH ../siv/csr_pcs10gbaser.sv
+Info: altera_10gbaser: add_fileset_file ./mentor/csr_pcs10gbaser_h.sv SYSTEM_VERILOG_ENCRYPT PATH ../siv/mentor/csr_pcs10gbaser_h.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/csr_pcs10gbaser.sv SYSTEM_VERILOG_ENCRYPT PATH ../siv/mentor/csr_pcs10gbaser.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./sv_reconfig_bundle_to_xcvr.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_reconfig_bundle_to_xcvr.sv
+Info: altera_10gbaser: add_fileset_file ./sv_reconfig_bundle_to_ip.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_reconfig_bundle_to_ip.sv
+Info: altera_10gbaser: add_fileset_file ./sv_reconfig_bundle_merger.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_reconfig_bundle_merger.sv
+Info: altera_10gbaser: add_fileset_file ./mentor/sv_reconfig_bundle_to_xcvr.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/sv/sv_reconfig_bundle_to_xcvr.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/sv_reconfig_bundle_to_ip.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/sv/sv_reconfig_bundle_to_ip.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/sv_reconfig_bundle_merger.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/sv/sv_reconfig_bundle_merger.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_h.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_h.sv
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_avmm_csr.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_avmm_csr.sv
+Info: altera_10gbaser: add_fileset_file ./av_tx_pma_ch.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_tx_pma_ch.sv
+Info: altera_10gbaser: add_fileset_file ./av_tx_pma.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_tx_pma.sv
+Info: altera_10gbaser: add_fileset_file ./av_rx_pma.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_rx_pma.sv
+Info: altera_10gbaser: add_fileset_file ./av_pma.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_pma.sv
+Info: altera_10gbaser: add_fileset_file ./av_pcs_ch.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_pcs_ch.sv
+Info: altera_10gbaser: add_fileset_file ./av_pcs.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_pcs.sv
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_avmm.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_avmm.sv
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_native.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_native.sv
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_plls.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_plls.sv
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_data_adapter.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_data_adapter.sv
+Info: altera_10gbaser: add_fileset_file ./av_reconfig_bundle_to_basic.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_reconfig_bundle_to_basic.sv
+Info: altera_10gbaser: add_fileset_file ./av_reconfig_bundle_to_xcvr.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_reconfig_bundle_to_xcvr.sv
+Info: altera_10gbaser: add_fileset_file ./mentor/av_xcvr_h.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/av_xcvr_h.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_xcvr_avmm_csr.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/av_xcvr_avmm_csr.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_tx_pma_ch.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/av_tx_pma_ch.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_tx_pma.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/av_tx_pma.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_rx_pma.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/av_rx_pma.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_pma.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/av_pma.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_pcs_ch.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/av_pcs_ch.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_pcs.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/av_pcs.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_xcvr_avmm.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/av_xcvr_avmm.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_xcvr_native.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/av_xcvr_native.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_xcvr_plls.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/av_xcvr_plls.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_xcvr_data_adapter.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/av_xcvr_data_adapter.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_reconfig_bundle_to_basic.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/av_reconfig_bundle_to_basic.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_reconfig_bundle_to_xcvr.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/av_reconfig_bundle_to_xcvr.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./av_hssi_8g_rx_pcs_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_8g_rx_pcs_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_8g_tx_pcs_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_8g_tx_pcs_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_common_pcs_pma_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_common_pcs_pma_interface_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_common_pld_pcs_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_common_pld_pcs_interface_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_pipe_gen1_2_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_pipe_gen1_2_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_rx_pcs_pma_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_rx_pcs_pma_interface_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_rx_pld_pcs_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_rx_pld_pcs_interface_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_tx_pcs_pma_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_tx_pcs_pma_interface_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_tx_pld_pcs_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_tx_pld_pcs_interface_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./mentor/av_hssi_8g_rx_pcs_rbc.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/rbc/av_hssi_8g_rx_pcs_rbc.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_hssi_8g_tx_pcs_rbc.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/rbc/av_hssi_8g_tx_pcs_rbc.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_hssi_common_pcs_pma_interface_rbc.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/rbc/av_hssi_common_pcs_pma_interface_rbc.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_hssi_common_pld_pcs_interface_rbc.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/rbc/av_hssi_common_pld_pcs_interface_rbc.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_hssi_pipe_gen1_2_rbc.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/rbc/av_hssi_pipe_gen1_2_rbc.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_hssi_rx_pcs_pma_interface_rbc.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/rbc/av_hssi_rx_pcs_pma_interface_rbc.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_hssi_rx_pld_pcs_interface_rbc.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/rbc/av_hssi_rx_pld_pcs_interface_rbc.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_hssi_tx_pcs_pma_interface_rbc.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/rbc/av_hssi_tx_pcs_pma_interface_rbc.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_hssi_tx_pld_pcs_interface_rbc.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/av/rbc/av_hssi_tx_pld_pcs_interface_rbc.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_10gbaser_nr.sv SYSTEM_VERILOG PATH ../av/av_xcvr_10gbaser_nr.sv
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_10gbaser_native.sv SYSTEM_VERILOG PATH ../av/av_xcvr_10gbaser_native.sv
+Info: altera_10gbaser: add_fileset_file ./mentor/av_xcvr_10gbaser_nr.sv SYSTEM_VERILOG_ENCRYPT PATH ../av/mentor/av_xcvr_10gbaser_nr.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/av_xcvr_10gbaser_native.sv SYSTEM_VERILOG_ENCRYPT PATH ../av/mentor/av_xcvr_10gbaser_native.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./altera_xcvr_native_av_functions_h.sv SYSTEM_VERILOG PATH ../../alt_xcvr/altera_xcvr_native_phy/av/altera_xcvr_native_av_functions_h.sv
+Info: altera_10gbaser: add_fileset_file ./altera_xcvr_native_av.sv SYSTEM_VERILOG PATH ../../alt_xcvr/altera_xcvr_native_phy/av/altera_xcvr_native_av.sv
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_xcvr_native_av_functions_h.sv SYSTEM_VERILOG_ENCRYPT PATH ../../alt_xcvr/altera_xcvr_native_phy/av/mentor/altera_xcvr_native_av_functions_h.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_xcvr_native_av.sv SYSTEM_VERILOG_ENCRYPT PATH ../../alt_xcvr/altera_xcvr_native_phy/av/mentor/altera_xcvr_native_av.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./altera_xcvr_10gbaser.sv SYSTEM_VERILOG PATH .//altera_xcvr_10gbaser.sv
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_xcvr_10gbaser.sv SYSTEM_VERILOG_ENCRYPT PATH ./mentor/altera_xcvr_10gbaser.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./altera_xcvr_reset_control.sv SYSTEM_VERILOG PATH ../../alt_xcvr/altera_xcvr_reset_control/altera_xcvr_reset_control.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_reset_counter.sv SYSTEM_VERILOG PATH ../../alt_xcvr/altera_xcvr_reset_control/alt_xcvr_reset_counter.sv
+Info: altera_10gbaser: add_fileset_file ./mentor/altera_xcvr_reset_control.sv SYSTEM_VERILOG_ENCRYPT PATH ../../alt_xcvr/altera_xcvr_reset_control/mentor/altera_xcvr_reset_control.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/alt_xcvr_reset_counter.sv SYSTEM_VERILOG_ENCRYPT PATH ../../alt_xcvr/altera_xcvr_reset_control/mentor/alt_xcvr_reset_counter.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_arbiter.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_arbiter.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_m2s.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_m2s.sv
+Info: altera_10gbaser: add_fileset_file ./mentor/alt_xcvr_arbiter.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/ctrl/alt_xcvr_arbiter.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: add_fileset_file ./mentor/alt_xcvr_m2s.sv SYSTEM_VERILOG_ENCRYPT PATH ../../altera_xcvr_generic/mentor/ctrl/alt_xcvr_m2s.sv MENTOR_SPECIFIC
+Info: altera_10gbaser: "eth_10g_design_example_0" instantiated altera_xcvr_10gbaser "altera_10gbaser"
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between cmd_demux.src1 and cmd_mux_001.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux.sink1
+Info: eth_10g_mac: "eth_10g_design_example_0" instantiated altera_eth_10g_mac "eth_10g_mac"
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between cmd_demux.src1 and cmd_mux_001.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux.sink1
+Info: eth_loopback_composed: "eth_10g_design_example_0" instantiated altera_eth_loopback_composed "eth_loopback_composed"
+Info: tx_sc_fifo: "eth_10g_design_example_0" instantiated altera_avalon_sc_fifo "tx_sc_fifo"
+Info: dc_fifo_pause_adapt_pause_gen: "eth_10g_design_example_0" instantiated altera_avalon_dc_fifo "dc_fifo_pause_adapt_pause_gen"
+Info: pa_pg_before_timing_adapter: "eth_10g_design_example_0" instantiated timing_adapter "pa_pg_before_timing_adapter"
+Info: pa_pg_after_timing_adapter: "eth_10g_design_example_0" instantiated timing_adapter "pa_pg_after_timing_adapter"
+Info: eth_fifo_pause_ctrl_adapter: "eth_10g_design_example_0" instantiated altera_eth_fifo_pause_ctrl_adapter "eth_fifo_pause_ctrl_adapter"
+Info: mm_interconnect_0: "eth_10g_design_example_0" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: eth_10g_design_example_0_mm_pipeline_bridge_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "eth_10g_design_example_0_mm_pipeline_bridge_translator"
+Info: mm_bridge_m0_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "mm_bridge_m0_agent"
+Info: eth_10g_design_example_0_mm_pipeline_bridge_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "eth_10g_design_example_0_mm_pipeline_bridge_agent"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: eth_10g_design_example_0_mm_pipeline_bridge_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "eth_10g_design_example_0_mm_pipeline_bridge_burst_adapter"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv
+Info: tx_register_map: "eth_10g_mac" instantiated altera_eth_10g_tx_register_map "tx_register_map"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_st_clock_crosser.v
+Info: tx_eth_packet_underflow_control: "eth_10g_mac" instantiated altera_eth_packet_underflow_control "tx_eth_packet_underflow_control"
+Info: tx_eth_pad_inserter: "eth_10g_mac" instantiated altera_eth_pad_inserter "tx_eth_pad_inserter"
+Info: tx_eth_pkt_backpressure_control: "eth_10g_mac" instantiated altera_eth_pkt_backpressure_control "tx_eth_pkt_backpressure_control"
+Info: tx_eth_pause_beat_conversion: "eth_10g_mac" instantiated altera_eth_pause_beat_conversion "tx_eth_pause_beat_conversion"
+Info: tx_eth_pause_ctrl_gen: "eth_10g_mac" instantiated altera_eth_pause_ctrl_gen "tx_eth_pause_ctrl_gen"
+Info: tx_st_pause_ctrl_error_adapter: "eth_10g_mac" instantiated error_adapter "tx_st_pause_ctrl_error_adapter"
+Info: tx_st_mux_flow_control_user_frame: "eth_10g_mac" instantiated multiplexer "tx_st_mux_flow_control_user_frame"
+Info: tx_eth_address_inserter: "eth_10g_mac" instantiated altera_eth_address_inserter "tx_eth_address_inserter"
+Info: tx_eth_crc_inserter: "eth_10g_mac" instantiated altera_eth_crc "tx_eth_crc_inserter"
+Info: tx_st_pipeline_stage_rs: "eth_10g_mac" instantiated altera_avalon_st_pipeline_stage "tx_st_pipeline_stage_rs"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_st_pipeline_base.v
+Info: tx_st_splitter_1: "eth_10g_mac" instantiated altera_avalon_st_splitter "tx_st_splitter_1"
+Info: tx_st_timing_adapter_frame_decoder: "eth_10g_mac" instantiated timing_adapter "tx_st_timing_adapter_frame_decoder"
+Info: tx_eth_frame_decoder: "eth_10g_mac" instantiated altera_eth_frame_decoder "tx_eth_frame_decoder"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_st_pipeline_base.v
+Info: tx_st_error_adapter_stat: "eth_10g_mac" instantiated error_adapter "tx_st_error_adapter_stat"
+Info: tx_st_timing_adapter_splitter_status_in: "eth_10g_mac" instantiated timing_adapter "tx_st_timing_adapter_splitter_status_in"
+Info: tx_st_timing_adapter_splitter_status_output: "eth_10g_mac" instantiated timing_adapter "tx_st_timing_adapter_splitter_status_output"
+Info: tx_eth_statistics_collector: "eth_10g_mac" instantiated altera_eth_10gmem_statistics_collector "tx_eth_statistics_collector"
+Info: tx_st_status_output_delay_to_statistic: "eth_10g_mac" instantiated altera_avalon_st_delay "tx_st_status_output_delay_to_statistic"
+Info: tx_eth_packet_formatter: "eth_10g_mac" instantiated altera_eth_packet_formatter "tx_eth_packet_formatter"
+Info: tx_eth_xgmii_termination: "eth_10g_mac" instantiated altera_eth_xgmii_termination "tx_eth_xgmii_termination"
+Info: tx_st_timing_adapter_splitter_in: "eth_10g_mac" instantiated timing_adapter "tx_st_timing_adapter_splitter_in"
+Info: tx_st_timing_adapter_splitter_out_0: "eth_10g_mac" instantiated timing_adapter "tx_st_timing_adapter_splitter_out_0"
+Info: tx_eth_link_fault_generation: "eth_10g_mac" instantiated altera_eth_link_fault_generation "tx_eth_link_fault_generation"
+Info: rx_register_map: "eth_10g_mac" instantiated altera_eth_10g_rx_register_map "rx_register_map"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_st_clock_crosser.v
+Info: rx_eth_link_fault_detection: "eth_10g_mac" instantiated altera_eth_link_fault_detection "rx_eth_link_fault_detection"
+Info: rx_eth_lane_decoder: "eth_10g_mac" instantiated altera_eth_lane_decoder "rx_eth_lane_decoder"
+Info: rx_st_timing_adapter_frame_status_in: "eth_10g_mac" instantiated timing_adapter "rx_st_timing_adapter_frame_status_in"
+Info: rx_timing_adapter_frame_status_out_frame_decoder: "eth_10g_mac" instantiated timing_adapter "rx_timing_adapter_frame_status_out_frame_decoder"
+Info: rx_eth_frame_status_merger: "eth_10g_mac" instantiated altera_eth_frame_status_merger "rx_eth_frame_status_merger"
+Info: rx_eth_crc_pad_rem: "eth_10g_mac" instantiated altera_eth_crc_pad_rem "rx_eth_crc_pad_rem"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_st_pipeline_base.v
+Info: rx_eth_packet_overflow_control: "eth_10g_mac" instantiated altera_eth_packet_overflow_control "rx_eth_packet_overflow_control"
+Info: rx_st_error_adapter_stat: "eth_10g_mac" instantiated error_adapter "rx_st_error_adapter_stat"
+Info: txrx_timing_adapter_link_fault_status_rx: "eth_10g_mac" instantiated timing_adapter "txrx_timing_adapter_link_fault_status_rx"
+Info: txrx_timing_adapter_link_fault_status_export: "eth_10g_mac" instantiated timing_adapter "txrx_timing_adapter_link_fault_status_export"
+Info: rxtx_timing_adapter_pauselen_rx: "eth_10g_mac" instantiated timing_adapter "rxtx_timing_adapter_pauselen_rx"
+Info: rxtx_timing_adapter_pauselen_tx: "eth_10g_mac" instantiated timing_adapter "rxtx_timing_adapter_pauselen_tx"
+Info: mm_interconnect_0: "eth_10g_mac" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: mm_interconnect_1: "eth_10g_mac" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: mm_interconnect_2: "eth_10g_mac" instantiated altera_mm_interconnect "mm_interconnect_2"
+Info: lc_splitter_timing_adapter: "eth_loopback_composed" instantiated timing_adapter "lc_splitter_timing_adapter"
+Info: line_loopback: "eth_loopback_composed" instantiated altera_eth_loopback "line_loopback"
+Info: line_lb_timing_adapter: "eth_loopback_composed" instantiated timing_adapter "line_lb_timing_adapter"
+Info: mm_interconnect_0: "eth_loopback_composed" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: altera_avalon_mm_bridge_avalon_universal_master_0_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "altera_avalon_mm_bridge_avalon_universal_master_0_limiter"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv
+Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_st_handshake_clock_crosser.v
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_st_clock_crosser.v
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_avalon_st_pipeline_base.v
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv
+Info: router: "mm_interconnect_2" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_2" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv
+Info: qsys_10g: Done "qsys_10g" with 100 modules, 335 files
+Info: ip-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\qsys_10g.spd --output-directory=D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/
+Info: Doing: ip-make-simscript --spd=D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\qsys_10g.spd --output-directory=D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/
+Info: Generating the following file(s) for MODELSIM simulator in D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	52 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest --output-directory=D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g --report-file=bsf:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\qsys_10g.bsf --system-info=DEVICE_FAMILY="Arria V" --system-info=DEVICE=5ASTFD5K3F40I3ES --system-info=DEVICE_SPEEDGRADE=3_H3 --component-file=D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g.qsys
+Progress: Loading ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g.qsys
+Progress: Reading input file
+Progress: Adding clk [clock_source 14.0]
+Progress: Parameterizing module clk
+Progress: Adding bfm_master [altera_avalon_mm_master_bfm 14.0]
+Progress: Parameterizing module bfm_master
+Progress: Adding jtag_master [altera_jtag_avalon_master 14.0]
+Progress: Parameterizing module jtag_master
+Progress: Adding led_pio [altera_avalon_pio 14.0]
+Progress: Parameterizing module led_pio
+Progress: Adding button_pio [altera_avalon_pio 14.0]
+Progress: Parameterizing module button_pio
+Progress: Adding onchip_ram [altera_avalon_onchip_memory2 14.0]
+Progress: Parameterizing module onchip_ram
+Progress: Adding eth_10g_design_example_0 [altera_eth_10g_design_example 14.0]
+Progress: Parameterizing module eth_10g_design_example_0
+Progress: Adding mm_bridge [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: qsys_10g.clk: The input clock frequency must be known or set by the parent if this is a subsystem.
+Info: qsys_10g.eth_10g_design_example_0.eth_10g_design_example_0: There are recommended upgrades for: altera_10gbaser, eth_10g_mac
+Info: qsys_10g.eth_10g_design_example_0.altera_10gbaser: PHY IP will require 2 reconfiguration interfaces for connection to the external reconfiguration controller.
+Info: qsys_10g.eth_10g_design_example_0.altera_10gbaser: Reconfiguration interface offset  0 is connected to the transceiver channel .
+Info: qsys_10g.eth_10g_design_example_0.altera_10gbaser: Reconfiguration interface offset  1 is connected to the transmit PLL .
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser.xgmii_rx_dc_0: Interface must have an associated reset
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser.xgmii_tx_dc_0: Interface must have an associated reset
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser: altera_10gbaser.xgmii_rx_clk cannot be both connected and exported
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser.xgmii_rx_dc_0: altera_10gbaser.xgmii_rx_dc_0 does not have an associated reset
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser.xgmii_tx_dc_0: altera_10gbaser.xgmii_tx_dc_0 does not have an associated reset
+Warning: qsys_10g.clk.clk/eth_10g_design_example_0.mm_clk: eth_10g_design_example_0.mm_clk requires 156250000Hz, but source has frequency of 0Hz
+Warning: qsys_10g.eth_10g_design_example_0: eth_10g_design_example_0.reconfig_to_xcvr must be exported, or connected to a matching conduit.
+Warning: qsys_10g.eth_10g_design_example_0: eth_10g_design_example_0.reconfig_from_xcvr must be exported, or connected to a matching conduit.
+Warning: qsys_10g.eth_10g_design_example_0: eth_10g_design_example_0.rx_data_ready must be exported, or connected to a matching conduit.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest --output-directory=D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\synthesis --file-set=QUARTUS_SYNTH --report-file=html:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\qsys_10g.html --report-file=sopcinfo:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g.sopcinfo --report-file=cmp:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\qsys_10g.cmp --report-file=qip:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\synthesis\qsys_10g.qip --report-file=svd:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\synthesis\qsys_10g.svd --report-file=regmap:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\synthesis\qsys_10g.regmap --report-file=xml:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\qsys_10g.xml --report-file=debuginfo:D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g\synthesis\qsys_10g.debuginfo --system-info=DEVICE_FAMILY="Arria V" --system-info=DEVICE=5ASTFD5K3F40I3ES --system-info=DEVICE_SPEEDGRADE=3_H3 --component-file=D:\pervices-project\10GE\jtag-test\ETH_10GBASER_DEMO_DESIGN-jtagtest\qsys_10g.qsys --language=VERILOG
+Progress: Loading ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g.qsys
+Progress: Reading input file
+Progress: Adding clk [clock_source 14.0]
+Progress: Parameterizing module clk
+Progress: Adding bfm_master [altera_avalon_mm_master_bfm 14.0]
+Progress: Parameterizing module bfm_master
+Progress: Adding jtag_master [altera_jtag_avalon_master 14.0]
+Progress: Parameterizing module jtag_master
+Progress: Adding led_pio [altera_avalon_pio 14.0]
+Progress: Parameterizing module led_pio
+Progress: Adding button_pio [altera_avalon_pio 14.0]
+Progress: Parameterizing module button_pio
+Progress: Adding onchip_ram [altera_avalon_onchip_memory2 14.0]
+Progress: Parameterizing module onchip_ram
+Progress: Adding eth_10g_design_example_0 [altera_eth_10g_design_example 14.0]
+Progress: Parameterizing module eth_10g_design_example_0
+Progress: Adding mm_bridge [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: qsys_10g.clk: The input clock frequency must be known or set by the parent if this is a subsystem.
+Info: qsys_10g.eth_10g_design_example_0.eth_10g_design_example_0: There are recommended upgrades for: altera_10gbaser, eth_10g_mac
+Info: qsys_10g.eth_10g_design_example_0.altera_10gbaser: PHY IP will require 2 reconfiguration interfaces for connection to the external reconfiguration controller.
+Info: qsys_10g.eth_10g_design_example_0.altera_10gbaser: Reconfiguration interface offset  0 is connected to the transceiver channel .
+Info: qsys_10g.eth_10g_design_example_0.altera_10gbaser: Reconfiguration interface offset  1 is connected to the transmit PLL .
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser.xgmii_rx_dc_0: Interface must have an associated reset
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser.xgmii_tx_dc_0: Interface must have an associated reset
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser: altera_10gbaser.xgmii_rx_clk cannot be both connected and exported
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser.xgmii_rx_dc_0: altera_10gbaser.xgmii_rx_dc_0 does not have an associated reset
+Warning: qsys_10g.eth_10g_design_example_0.altera_10gbaser.xgmii_tx_dc_0: altera_10gbaser.xgmii_tx_dc_0 does not have an associated reset
+Warning: qsys_10g.clk.clk/eth_10g_design_example_0.mm_clk: eth_10g_design_example_0.mm_clk requires 156250000Hz, but source has frequency of 0Hz
+Warning: qsys_10g.eth_10g_design_example_0: eth_10g_design_example_0.reconfig_to_xcvr must be exported, or connected to a matching conduit.
+Warning: qsys_10g.eth_10g_design_example_0: eth_10g_design_example_0.reconfig_from_xcvr must be exported, or connected to a matching conduit.
+Warning: qsys_10g.eth_10g_design_example_0: eth_10g_design_example_0.rx_data_ready must be exported, or connected to a matching conduit.
+Info: qsys_10g: Generating qsys_10g "qsys_10g" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master mm_bridge.m0 and slave eth_10g_design_example_0.mm_pipeline_bridge because the master has readdatavalid signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master mm_bridge.m0 and slave eth_10g_design_example_0.mm_pipeline_bridge because the master has burstcount signal 4 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master mm_bridge.m0 and slave eth_10g_design_example_0.mm_pipeline_bridge because the master has address signal 24 bit wide, but the slave is 19 bit wide.
+Info: Interconnect is inserted between master mm_bridge.m0 and slave eth_10g_design_example_0.mm_pipeline_bridge because the master has byteenable signal 4 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master mm_bridge.m0 and slave eth_10g_design_example_0.mm_pipeline_bridge because the master has debugaccess signal 1 bit wide, but the slave is 0 bit wide.
+Info: Inserting clock-crossing logic between cmd_demux.src3 and cmd_mux_003.sink0
+Info: Inserting clock-crossing logic between cmd_demux.src4 and cmd_mux_004.sink0
+Info: Inserting clock-crossing logic between rsp_demux_003.src0 and rsp_mux.sink3
+Info: Inserting clock-crossing logic between rsp_demux_004.src0 and rsp_mux.sink4
+Info: eth_10g_design_example_0: "qsys_10g" instantiated altera_eth_10g_design_example "eth_10g_design_example_0"
+Info: mm_bridge: "qsys_10g" instantiated altera_avalon_mm_bridge "mm_bridge"
+Info: mm_interconnect_0: "qsys_10g" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "qsys_10g" instantiated altera_reset_controller "rst_controller"
+Info: altera_avalon_mm_bridge: "eth_10g_design_example_0" instantiated altera_merlin_master_translator "altera_avalon_mm_bridge"
+Info: altera_10gbaser: add_fileset_file ./altera_xcvr_functions.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/altera_xcvr_functions.sv
+Info: altera_10gbaser: add_fileset_file ./alt_reset_ctrl_lego.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_reset_ctrl_lego.sv
+Info: altera_10gbaser: add_fileset_file ./alt_reset_ctrl_tgx_cdrauto.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_reset_ctrl_tgx_cdrauto.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_resync.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_resync.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_csr_common_h.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_common_h.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_csr_common.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_common.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_csr_pcs8g_h.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_pcs8g_h.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_csr_pcs8g.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_pcs8g.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_csr_selector.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_csr_selector.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_mgmt2dec.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_mgmt2dec.sv
+Info: altera_10gbaser: add_fileset_file ./altera_wait_generate.v VERILOG PATH ../../altera_xcvr_generic/ctrl/altera_wait_generate.v
+Info: altera_10gbaser: add_fileset_file ./altera_avalon_st_handshake_clock_crosser.v VERILOG PATH ../../avalon_st/altera_avalon_st_handshake_clock_crosser/altera_avalon_st_handshake_clock_crosser.v
+Info: altera_10gbaser: add_fileset_file ./altera_avalon_st_clock_crosser.v VERILOG PATH ../../avalon_st/altera_avalon_st_handshake_clock_crosser/altera_avalon_st_clock_crosser.v
+Info: altera_10gbaser: add_fileset_file ./altera_avalon_st_pipeline_stage.sv SYSTEM_VERILOG PATH ../../avalon_st/altera_avalon_st_pipeline_stage/altera_avalon_st_pipeline_stage.sv
+Info: altera_10gbaser: add_fileset_file ./altera_avalon_st_pipeline_base.v VERILOG PATH ../../avalon_st/altera_avalon_st_pipeline_stage/altera_avalon_st_pipeline_base.v
+Info: altera_10gbaser: add_fileset_file ./alt_10gbaser_pcs.v VERILOG_ENCRYPT PATH ../av_soft_pcs/alt_10gbaser_pcs.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_params.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_params.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_async_fifo_fpga.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_async_fifo_fpga.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_bitsync.v VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_bitsync.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_bitsync2.v VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_bitsync2.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_clockcomp.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_clockcomp.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_clk_ctrl.v VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_clk_ctrl.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_gearbox_exp.v VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_gearbox_exp.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_gearbox_red.v VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_gearbox_red.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_pcs_10g.v VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_pcs_10g.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_pcs_10g_top.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_pcs_10g_top.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_reg_map_av.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_reg_map_av.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_rx_fifo.sv SYSTEM_VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_rx_fifo.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_rx_fifo_wrap.v VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_rx_fifo_wrap.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_rx_top.v VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_rx_top.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_tx_top.v VERILOG_ENCRYPT PATH ../av_soft_pcs/altera_10gbaser_phy_tx_top.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_1588_latency.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_1588_latency.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_ber.v VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_ber.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_ber_cnt_ns.v VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_ber_cnt_ns.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_ber_sm.v VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_ber_sm.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_blksync.v VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_blksync.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_blksync_datapath.v VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_blksync_datapath.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_decode.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_decode.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_decode_type.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_decode_type.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_descramble.v VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_descramble.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_encode.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_encode.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_encode_type.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_encode_type.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_lock_sm.v VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_lock_sm.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_nto1mux.v VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_nto1mux.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_prbs_gen_xg.v VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_prbs_gen_xg.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_prbs_ver_xg.v VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_prbs_ver_xg.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_random_err_cnt_ns.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_random_err_cnt_ns.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_random_gen.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_random_gen.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_random_ver.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_random_ver.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_random_ver_10g.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_random_ver_10g.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_register_with_byte_enable.v VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_register_with_byte_enable.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_rx_sm_datapath.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_rx_sm_datapath.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_rx_sm_ns.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_rx_sm_ns.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_scramble.v VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_scramble.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_square_wave_gen.v VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_square_wave_gen.v
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_tx_sm_datapath.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_tx_sm_datapath.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_tx_sm_ns.sv SYSTEM_VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_tx_sm_ns.sv
+Info: altera_10gbaser: add_fileset_file ./altera_10gbaser_phy_word_align.v VERILOG_ENCRYPT PATH ../soft_pcs/altera_10gbaser_phy_word_align.v
+Info: altera_10gbaser: add_fileset_file ./csr_pcs10gbaser_h.sv SYSTEM_VERILOG PATH ../siv/csr_pcs10gbaser_h.sv
+Info: altera_10gbaser: add_fileset_file ./csr_pcs10gbaser.sv SYSTEM_VERILOG PATH ../siv/csr_pcs10gbaser.sv
+Info: altera_10gbaser: add_fileset_file ./sv_reconfig_bundle_to_xcvr.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_reconfig_bundle_to_xcvr.sv
+Info: altera_10gbaser: add_fileset_file ./sv_reconfig_bundle_to_ip.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_reconfig_bundle_to_ip.sv
+Info: altera_10gbaser: add_fileset_file ./sv_reconfig_bundle_merger.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/sv/sv_reconfig_bundle_merger.sv
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_h.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_h.sv
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_avmm_csr.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_avmm_csr.sv
+Info: altera_10gbaser: add_fileset_file ./av_tx_pma_ch.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_tx_pma_ch.sv
+Info: altera_10gbaser: add_fileset_file ./av_tx_pma.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_tx_pma.sv
+Info: altera_10gbaser: add_fileset_file ./av_rx_pma.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_rx_pma.sv
+Info: altera_10gbaser: add_fileset_file ./av_pma.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_pma.sv
+Info: altera_10gbaser: add_fileset_file ./av_pcs_ch.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_pcs_ch.sv
+Info: altera_10gbaser: add_fileset_file ./av_pcs.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_pcs.sv
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_avmm.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_avmm.sv
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_native.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_native.sv
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_plls.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_plls.sv
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_data_adapter.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_xcvr_data_adapter.sv
+Info: altera_10gbaser: add_fileset_file ./av_reconfig_bundle_to_basic.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_reconfig_bundle_to_basic.sv
+Info: altera_10gbaser: add_fileset_file ./av_reconfig_bundle_to_xcvr.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/av_reconfig_bundle_to_xcvr.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_8g_rx_pcs_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_8g_rx_pcs_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_8g_tx_pcs_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_8g_tx_pcs_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_common_pcs_pma_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_common_pcs_pma_interface_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_common_pld_pcs_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_common_pld_pcs_interface_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_pipe_gen1_2_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_pipe_gen1_2_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_rx_pcs_pma_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_rx_pcs_pma_interface_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_rx_pld_pcs_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_rx_pld_pcs_interface_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_tx_pcs_pma_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_tx_pcs_pma_interface_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_hssi_tx_pld_pcs_interface_rbc.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/av/rbc/av_hssi_tx_pld_pcs_interface_rbc.sv
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_10gbaser_nr.sv SYSTEM_VERILOG PATH ../av/av_xcvr_10gbaser_nr.sv
+Info: altera_10gbaser: add_fileset_file ./av_xcvr_10gbaser_native.sv SYSTEM_VERILOG PATH ../av/av_xcvr_10gbaser_native.sv
+Info: altera_10gbaser: add_fileset_file ./altera_xcvr_native_av_functions_h.sv SYSTEM_VERILOG PATH ../../alt_xcvr/altera_xcvr_native_phy/av/altera_xcvr_native_av_functions_h.sv
+Info: altera_10gbaser: add_fileset_file ./altera_xcvr_native_av.sv SYSTEM_VERILOG PATH ../../alt_xcvr/altera_xcvr_native_phy/av/altera_xcvr_native_av.sv
+Info: altera_10gbaser: add_fileset_file ./altera_xcvr_10gbaser.sv SYSTEM_VERILOG PATH .//altera_xcvr_10gbaser.sv
+Info: altera_10gbaser: add_fileset_file ./alt_10gbaser_phy.sdc OTHER PATH ../av_soft_pcs/alt_10gbaser_phy.sdc
+Info: altera_10gbaser: add_fileset_file ./alt_10gbaser_pcs.ocp OTHER PATH ../av_soft_pcs/alt_10gbaser_pcs.ocp
+Info: altera_10gbaser: add_fileset_file ./altera_xcvr_reset_control.sv SYSTEM_VERILOG PATH ../../alt_xcvr/altera_xcvr_reset_control/altera_xcvr_reset_control.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_reset_counter.sv SYSTEM_VERILOG PATH ../../alt_xcvr/altera_xcvr_reset_control/alt_xcvr_reset_counter.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_arbiter.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_arbiter.sv
+Info: altera_10gbaser: add_fileset_file ./alt_xcvr_m2s.sv SYSTEM_VERILOG PATH ../../altera_xcvr_generic/ctrl/alt_xcvr_m2s.sv
+Info: altera_10gbaser: "eth_10g_design_example_0" instantiated altera_xcvr_10gbaser "altera_10gbaser"
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between cmd_demux.src1 and cmd_mux_001.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux.sink1
+Info: eth_10g_mac: "eth_10g_design_example_0" instantiated altera_eth_10g_mac "eth_10g_mac"
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between cmd_demux.src1 and cmd_mux_001.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux.sink1
+Info: eth_loopback_composed: "eth_10g_design_example_0" instantiated altera_eth_loopback_composed "eth_loopback_composed"
+Info: tx_sc_fifo: "eth_10g_design_example_0" instantiated altera_avalon_sc_fifo "tx_sc_fifo"
+Info: dc_fifo_pause_adapt_pause_gen: "eth_10g_design_example_0" instantiated altera_avalon_dc_fifo "dc_fifo_pause_adapt_pause_gen"
+Info: pa_pg_before_timing_adapter: "eth_10g_design_example_0" instantiated timing_adapter "pa_pg_before_timing_adapter"
+Info: pa_pg_after_timing_adapter: "eth_10g_design_example_0" instantiated timing_adapter "pa_pg_after_timing_adapter"
+Info: eth_fifo_pause_ctrl_adapter: "eth_10g_design_example_0" instantiated altera_eth_fifo_pause_ctrl_adapter "eth_fifo_pause_ctrl_adapter"
+Info: mm_interconnect_0: "eth_10g_design_example_0" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: eth_10g_design_example_0_mm_pipeline_bridge_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "eth_10g_design_example_0_mm_pipeline_bridge_translator"
+Info: mm_bridge_m0_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "mm_bridge_m0_agent"
+Info: eth_10g_design_example_0_mm_pipeline_bridge_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "eth_10g_design_example_0_mm_pipeline_bridge_agent"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: eth_10g_design_example_0_mm_pipeline_bridge_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "eth_10g_design_example_0_mm_pipeline_bridge_burst_adapter"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: tx_register_map: "eth_10g_mac" instantiated altera_eth_10g_tx_register_map "tx_register_map"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_st_clock_crosser.v
+Info: tx_eth_packet_underflow_control: "eth_10g_mac" instantiated altera_eth_packet_underflow_control "tx_eth_packet_underflow_control"
+Info: tx_eth_pad_inserter: "eth_10g_mac" instantiated altera_eth_pad_inserter "tx_eth_pad_inserter"
+Info: tx_eth_pkt_backpressure_control: "eth_10g_mac" instantiated altera_eth_pkt_backpressure_control "tx_eth_pkt_backpressure_control"
+Info: tx_eth_pause_beat_conversion: "eth_10g_mac" instantiated altera_eth_pause_beat_conversion "tx_eth_pause_beat_conversion"
+Info: tx_eth_pause_ctrl_gen: "eth_10g_mac" instantiated altera_eth_pause_ctrl_gen "tx_eth_pause_ctrl_gen"
+Info: tx_st_pause_ctrl_error_adapter: "eth_10g_mac" instantiated error_adapter "tx_st_pause_ctrl_error_adapter"
+Info: tx_st_mux_flow_control_user_frame: "eth_10g_mac" instantiated multiplexer "tx_st_mux_flow_control_user_frame"
+Info: tx_eth_address_inserter: "eth_10g_mac" instantiated altera_eth_address_inserter "tx_eth_address_inserter"
+Info: tx_eth_crc_inserter: "eth_10g_mac" instantiated altera_eth_crc "tx_eth_crc_inserter"
+Info: tx_st_pipeline_stage_rs: "eth_10g_mac" instantiated altera_avalon_st_pipeline_stage "tx_st_pipeline_stage_rs"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: tx_st_splitter_1: "eth_10g_mac" instantiated altera_avalon_st_splitter "tx_st_splitter_1"
+Info: tx_st_timing_adapter_frame_decoder: "eth_10g_mac" instantiated timing_adapter "tx_st_timing_adapter_frame_decoder"
+Info: tx_eth_frame_decoder: "eth_10g_mac" instantiated altera_eth_frame_decoder "tx_eth_frame_decoder"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: tx_st_error_adapter_stat: "eth_10g_mac" instantiated error_adapter "tx_st_error_adapter_stat"
+Info: tx_st_timing_adapter_splitter_status_in: "eth_10g_mac" instantiated timing_adapter "tx_st_timing_adapter_splitter_status_in"
+Info: tx_st_timing_adapter_splitter_status_output: "eth_10g_mac" instantiated timing_adapter "tx_st_timing_adapter_splitter_status_output"
+Info: tx_eth_statistics_collector: "eth_10g_mac" instantiated altera_eth_10gmem_statistics_collector "tx_eth_statistics_collector"
+Info: tx_st_status_output_delay_to_statistic: "eth_10g_mac" instantiated altera_avalon_st_delay "tx_st_status_output_delay_to_statistic"
+Info: tx_eth_packet_formatter: "eth_10g_mac" instantiated altera_eth_packet_formatter "tx_eth_packet_formatter"
+Info: tx_eth_xgmii_termination: "eth_10g_mac" instantiated altera_eth_xgmii_termination "tx_eth_xgmii_termination"
+Info: tx_st_timing_adapter_splitter_in: "eth_10g_mac" instantiated timing_adapter "tx_st_timing_adapter_splitter_in"
+Info: tx_st_timing_adapter_splitter_out_0: "eth_10g_mac" instantiated timing_adapter "tx_st_timing_adapter_splitter_out_0"
+Info: tx_eth_link_fault_generation: "eth_10g_mac" instantiated altera_eth_link_fault_generation "tx_eth_link_fault_generation"
+Info: rx_register_map: "eth_10g_mac" instantiated altera_eth_10g_rx_register_map "rx_register_map"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_st_clock_crosser.v
+Info: rx_eth_link_fault_detection: "eth_10g_mac" instantiated altera_eth_link_fault_detection "rx_eth_link_fault_detection"
+Info: rx_eth_lane_decoder: "eth_10g_mac" instantiated altera_eth_lane_decoder "rx_eth_lane_decoder"
+Info: rx_st_timing_adapter_frame_status_in: "eth_10g_mac" instantiated timing_adapter "rx_st_timing_adapter_frame_status_in"
+Info: rx_timing_adapter_frame_status_out_frame_decoder: "eth_10g_mac" instantiated timing_adapter "rx_timing_adapter_frame_status_out_frame_decoder"
+Info: rx_eth_frame_status_merger: "eth_10g_mac" instantiated altera_eth_frame_status_merger "rx_eth_frame_status_merger"
+Info: rx_eth_crc_pad_rem: "eth_10g_mac" instantiated altera_eth_crc_pad_rem "rx_eth_crc_pad_rem"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: rx_eth_packet_overflow_control: "eth_10g_mac" instantiated altera_eth_packet_overflow_control "rx_eth_packet_overflow_control"
+Info: rx_st_error_adapter_stat: "eth_10g_mac" instantiated error_adapter "rx_st_error_adapter_stat"
+Info: txrx_timing_adapter_link_fault_status_rx: "eth_10g_mac" instantiated timing_adapter "txrx_timing_adapter_link_fault_status_rx"
+Info: txrx_timing_adapter_link_fault_status_export: "eth_10g_mac" instantiated timing_adapter "txrx_timing_adapter_link_fault_status_export"
+Info: rxtx_timing_adapter_pauselen_rx: "eth_10g_mac" instantiated timing_adapter "rxtx_timing_adapter_pauselen_rx"
+Info: rxtx_timing_adapter_pauselen_tx: "eth_10g_mac" instantiated timing_adapter "rxtx_timing_adapter_pauselen_tx"
+Info: mm_interconnect_0: "eth_10g_mac" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: mm_interconnect_1: "eth_10g_mac" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: mm_interconnect_2: "eth_10g_mac" instantiated altera_mm_interconnect "mm_interconnect_2"
+Info: lc_splitter_timing_adapter: "eth_loopback_composed" instantiated timing_adapter "lc_splitter_timing_adapter"
+Info: line_loopback: "eth_loopback_composed" instantiated altera_eth_loopback "line_loopback"
+Info: line_lb_timing_adapter: "eth_loopback_composed" instantiated timing_adapter "line_lb_timing_adapter"
+Info: mm_interconnect_0: "eth_loopback_composed" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: altera_avalon_mm_bridge_avalon_universal_master_0_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "altera_avalon_mm_bridge_avalon_universal_master_0_limiter"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_st_clock_crosser.v
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: router: "mm_interconnect_2" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_2" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test/ETH_10GBASER_DEMO_DESIGN-jtagtest/qsys_10g/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: qsys_10g: Done "qsys_10g" with 100 modules, 232 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

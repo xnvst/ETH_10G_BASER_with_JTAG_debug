@@ -1,0 +1,24 @@
+# system info avalon_dc_fifo on 2014.11.06.21:36:28
+system_info:
+name,value
+DEVICE,5ASTMD3E3F31I3
+DEVICE_FAMILY,Arria V
+GENERATION_ID,1415327785
+#
+#
+# Files generated for avalon_dc_fifo on 2014.11.06.21:36:28
+files:
+filepath,kind,attributes,module,is_top
+simulation/avalon_dc_fifo.v,VERILOG,,avalon_dc_fifo,true
+simulation/submodules/altera_avalon_dc_fifo.v,VERILOG,,altera_avalon_dc_fifo,false
+simulation/submodules/altera_dcfifo_synchronizer_bundle.v,VERILOG,,altera_avalon_dc_fifo,false
+simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
+simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
+simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+avalon_dc_fifo.dc_fifo,altera_avalon_dc_fifo
+avalon_dc_fifo.rst_controller,altera_reset_controller
+avalon_dc_fifo.rst_controller_001,altera_reset_controller

@@ -1,0 +1,81 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest --output-directory=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\simulation --file-set=SIM_VERILOG --report-file=html:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\avalon_dc_fifo.html --report-file=sopcinfo:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo.sopcinfo --report-file=csv:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\avalon_dc_fifo.csv --report-file=spd:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\avalon_dc_fifo.spd --report-file=cmp:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\avalon_dc_fifo.cmp --report-file=sip:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\simulation\avalon_dc_fifo.sip --system-info=DEVICE_FAMILY="Arria V" --system-info=DEVICE=5ASTMD3E3F31I3 --system-info=DEVICE_SPEEDGRADE=3_H3 --component-file=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo.qsys
+Progress: Loading ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo.qsys
+Progress: Reading input file
+Progress: Adding clk_ext [clock_source 14.0]
+Progress: Parameterizing module clk_ext
+Progress: Adding dc_fifo [altera_avalon_dc_fifo 14.0]
+Progress: Parameterizing module dc_fifo
+Progress: Adding clk_int [clock_source 14.0]
+Progress: Parameterizing module clk_int
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: avalon_dc_fifo.clk_ext: The input clock frequency must be known or set by the parent if this is a subsystem.
+Warning: avalon_dc_fifo.clk_int: The input clock frequency must be known or set by the parent if this is a subsystem.
+Info: avalon_dc_fifo: Generating avalon_dc_fifo "avalon_dc_fifo" for SIM_VERILOG
+Info: dc_fifo: "avalon_dc_fifo" instantiated altera_avalon_dc_fifo "dc_fifo"
+Info: rst_controller: "avalon_dc_fifo" instantiated altera_reset_controller "rst_controller"
+Info: avalon_dc_fifo: Done "avalon_dc_fifo" with 3 modules, 6 files
+Info: ip-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\avalon_dc_fifo.spd --output-directory=D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/simulation/
+Info: Doing: ip-make-simscript --spd=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\avalon_dc_fifo.spd --output-directory=D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/simulation/
+Info: Generating the following file(s) for MODELSIM simulator in D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	2 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest --output-directory=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo --report-file=bsf:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\avalon_dc_fifo.bsf --system-info=DEVICE_FAMILY="Arria V" --system-info=DEVICE=5ASTMD3E3F31I3 --system-info=DEVICE_SPEEDGRADE=3_H3 --component-file=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo.qsys
+Progress: Loading ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo.qsys
+Progress: Reading input file
+Progress: Adding clk_ext [clock_source 14.0]
+Progress: Parameterizing module clk_ext
+Progress: Adding dc_fifo [altera_avalon_dc_fifo 14.0]
+Progress: Parameterizing module dc_fifo
+Progress: Adding clk_int [clock_source 14.0]
+Progress: Parameterizing module clk_int
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: avalon_dc_fifo.clk_ext: The input clock frequency must be known or set by the parent if this is a subsystem.
+Warning: avalon_dc_fifo.clk_int: The input clock frequency must be known or set by the parent if this is a subsystem.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest --output-directory=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\synthesis --file-set=QUARTUS_SYNTH --report-file=html:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\avalon_dc_fifo.html --report-file=sopcinfo:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo.sopcinfo --report-file=cmp:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\avalon_dc_fifo.cmp --report-file=qip:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\synthesis\avalon_dc_fifo.qip --report-file=svd:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\synthesis\avalon_dc_fifo.svd --report-file=regmap:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\synthesis\avalon_dc_fifo.regmap --report-file=xml:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\avalon_dc_fifo.xml --report-file=debuginfo:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo\synthesis\avalon_dc_fifo.debuginfo --system-info=DEVICE_FAMILY="Arria V" --system-info=DEVICE=5ASTMD3E3F31I3 --system-info=DEVICE_SPEEDGRADE=3_H3 --component-file=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\avalon_dc_fifo.qsys --language=VERILOG
+Progress: Loading ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo.qsys
+Progress: Reading input file
+Progress: Adding clk_ext [clock_source 14.0]
+Progress: Parameterizing module clk_ext
+Progress: Adding dc_fifo [altera_avalon_dc_fifo 14.0]
+Progress: Parameterizing module dc_fifo
+Progress: Adding clk_int [clock_source 14.0]
+Progress: Parameterizing module clk_int
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: avalon_dc_fifo.clk_ext: The input clock frequency must be known or set by the parent if this is a subsystem.
+Warning: avalon_dc_fifo.clk_int: The input clock frequency must be known or set by the parent if this is a subsystem.
+Info: avalon_dc_fifo: Generating avalon_dc_fifo "avalon_dc_fifo" for QUARTUS_SYNTH
+Info: dc_fifo: "avalon_dc_fifo" instantiated altera_avalon_dc_fifo "dc_fifo"
+Info: rst_controller: "avalon_dc_fifo" instantiated altera_reset_controller "rst_controller"
+Info: avalon_dc_fifo: Done "avalon_dc_fifo" with 3 modules, 7 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

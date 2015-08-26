@@ -1,0 +1,22 @@
+
+-- File Name = D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/reconfig_mif/altera_10gbaser_txpll0.mif.mif
+WIDTH=16;
+DEPTH=12;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	0   :   0000000000100001; -- Start of MIF opcode - FAMILY - Arria V
+	1   :   0000000000100010; -- Type of MIF opcode
+	2   :   0000000000000011; -- RefClk switch opcode
+	3   :   0010100000001110; -- PMA - TX PLL section
+	4   :   0001100000000001;
+	5   :   0000000000000000;
+	6   :   1000010001010000;
+	7   :   0100000000000001;
+	8   :   0000000100100000;
+	9   :   0000100000010111; -- PMA - TX PLL section 2
+	10  :   0011000000000000;
+	11  :   0000000000011111; -- End of MIF opcode
+END;

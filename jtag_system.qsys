@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element $${FILENAME}
+   {
+   }
+   element clk
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element mm_bridge_s4.clk
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+   }
+   element jtag_master
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element mm_bridge_s0.m0
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+   }
+   element mm_bridge_s4.m0
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+   }
+   element mm_bridge_master
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element mm_bridge_s0
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element mm_bridge_s1
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element mm_bridge_s2
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element mm_bridge_s3
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element mm_bridge_s4
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element mm_bridge_s5
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element mm_bridge_s6
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element mm_bridge_s5.reset
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+   }
+   element mm_bridge_s0.reset
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+   }
+   element mm_bridge_s5.s0
+   {
+      datum baseAddress
+      {
+         value = "285474816";
+         type = "String";
+      }
+   }
+   element mm_bridge_s3.s0
+   {
+      datum baseAddress
+      {
+         value = "268435456";
+         type = "String";
+      }
+   }
+   element mm_bridge_s6.s0
+   {
+      datum baseAddress
+      {
+         value = "536870912";
+         type = "String";
+      }
+   }
+   element mm_bridge_s1.s0
+   {
+      datum baseAddress
+      {
+         value = "16777216";
+         type = "String";
+      }
+   }
+   element mm_bridge_s2.s0
+   {
+      datum baseAddress
+      {
+         value = "17039360";
+         type = "String";
+      }
+   }
+   element mm_bridge_s4.s0
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+      datum baseAddress
+      {
+         value = "285212672";
+         type = "String";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5ASTMD3E3F31I3" />
+ <parameter name="deviceFamily" value="Arria V" />
+ <parameter name="deviceSpeedGrade" value="3_H3" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="chip.qpf" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clk" internal="clk.clk_in" type="clock" dir="end" />
+ <interface name="reset" internal="clk.clk_in_reset" type="reset" dir="end" />
+ <interface
+   name="resetrequest"
+   internal="jtag_master.master_reset"
+   type="reset"
+   dir="start" />
+ <interface
+   name="mm_bridge_s0_m0"
+   internal="mm_bridge_s0.m0"
+   type="avalon"
+   dir="start" />
+ <interface
+   name="mm_bridge_s2_m0"
+   internal="mm_bridge_s2.m0"
+   type="avalon"
+   dir="start" />
+ <interface
+   name="mm_bridge_s3_m0"
+   internal="mm_bridge_s3.m0"
+   type="avalon"
+   dir="start" />
+ <interface
+   name="mm_bridge_s1_m0"
+   internal="mm_bridge_s1.m0"
+   type="avalon"
+   dir="start" />
+ <interface
+   name="mm_bridge_s4_m0"
+   internal="mm_bridge_s4.m0"
+   type="avalon"
+   dir="start" />
+ <interface
+   name="mm_bridge_s5_m0"
+   internal="mm_bridge_s5.m0"
+   type="avalon"
+   dir="start" />
+ <interface
+   name="mm_bridge_s6_m0"
+   internal="mm_bridge_s6.m0"
+   type="avalon"
+   dir="start" />
+ <module kind="clock_source" version="14.0" enabled="1" name="clk">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="false" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   kind="altera_jtag_avalon_master"
+   version="14.0"
+   enabled="1"
+   name="jtag_master">
+  <parameter name="USE_PLI" value="0" />
+  <parameter name="PLI_PORT" value="50000" />
+  <parameter name="COMPONENT_CLOCK" value="0" />
+  <parameter name="FAST_VER" value="0" />
+  <parameter name="FIFO_DEPTHS" value="2" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+  <parameter name="AUTO_DEVICE" value="5ASTMD3E3F31I3" />
+ </module>
+ <module
+   kind="altera_avalon_mm_bridge"
+   version="14.0"
+   enabled="1"
+   name="mm_bridge_master">
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="SYMBOL_WIDTH" value="8" />
+  <parameter name="ADDRESS_WIDTH" value="32" />
+  <parameter name="SYSINFO_ADDR_WIDTH" value="30" />
+  <parameter name="USE_AUTO_ADDRESS_WIDTH" value="0" />
+  <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
+  <parameter name="MAX_BURST_SIZE" value="8" />
+  <parameter name="MAX_PENDING_RESPONSES" value="1" />
+  <parameter name="LINEWRAPBURSTS" value="0" />
+  <parameter name="PIPELINE_COMMAND" value="0" />
+  <parameter name="PIPELINE_RESPONSE" value="0" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+ </module>
+ <module
+   kind="altera_avalon_mm_bridge"
+   version="14.0"
+   enabled="1"
+   name="mm_bridge_s0">
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="SYMBOL_WIDTH" value="8" />
+  <parameter name="ADDRESS_WIDTH" value="24" />
+  <parameter name="SYSINFO_ADDR_WIDTH" value="10" />
+  <parameter name="USE_AUTO_ADDRESS_WIDTH" value="0" />
+  <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
+  <parameter name="MAX_BURST_SIZE" value="8" />
+  <parameter name="MAX_PENDING_RESPONSES" value="1" />
+  <parameter name="LINEWRAPBURSTS" value="0" />
+  <parameter name="PIPELINE_COMMAND" value="0" />
+  <parameter name="PIPELINE_RESPONSE" value="0" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+ </module>
+ <module
+   kind="altera_avalon_mm_bridge"
+   version="14.0"
+   enabled="1"
+   name="mm_bridge_s1">
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="SYMBOL_WIDTH" value="8" />
+  <parameter name="ADDRESS_WIDTH" value="18" />
+  <parameter name="SYSINFO_ADDR_WIDTH" value="10" />
+  <parameter name="USE_AUTO_ADDRESS_WIDTH" value="0" />
+  <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
+  <parameter name="MAX_BURST_SIZE" value="8" />
+  <parameter name="MAX_PENDING_RESPONSES" value="1" />
+  <parameter name="LINEWRAPBURSTS" value="0" />
+  <parameter name="PIPELINE_COMMAND" value="0" />
+  <parameter name="PIPELINE_RESPONSE" value="0" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+ </module>
+ <module
+   kind="altera_avalon_mm_bridge"
+   version="14.0"
+   enabled="1"
+   name="mm_bridge_s2">
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="SYMBOL_WIDTH" value="8" />
+  <parameter name="ADDRESS_WIDTH" value="18" />
+  <parameter name="SYSINFO_ADDR_WIDTH" value="10" />
+  <parameter name="USE_AUTO_ADDRESS_WIDTH" value="0" />
+  <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
+  <parameter name="MAX_BURST_SIZE" value="8" />
+  <parameter name="MAX_PENDING_RESPONSES" value="1" />
+  <parameter name="LINEWRAPBURSTS" value="0" />
+  <parameter name="PIPELINE_COMMAND" value="0" />
+  <parameter name="PIPELINE_RESPONSE" value="0" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+ </module>
+ <module
+   kind="altera_avalon_mm_bridge"
+   version="14.0"
+   enabled="1"
+   name="mm_bridge_s3">
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="SYMBOL_WIDTH" value="8" />
+  <parameter name="ADDRESS_WIDTH" value="24" />
+  <parameter name="SYSINFO_ADDR_WIDTH" value="10" />
+  <parameter name="USE_AUTO_ADDRESS_WIDTH" value="0" />
+  <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
+  <parameter name="MAX_BURST_SIZE" value="8" />
+  <parameter name="MAX_PENDING_RESPONSES" value="1" />
+  <parameter name="LINEWRAPBURSTS" value="0" />
+  <parameter name="PIPELINE_COMMAND" value="0" />
+  <parameter name="PIPELINE_RESPONSE" value="0" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+ </module>
+ <module
+   kind="altera_avalon_mm_bridge"
+   version="14.0"
+   enabled="1"
+   name="mm_bridge_s4">
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="SYMBOL_WIDTH" value="8" />
+  <parameter name="ADDRESS_WIDTH" value="18" />
+  <parameter name="SYSINFO_ADDR_WIDTH" value="10" />
+  <parameter name="USE_AUTO_ADDRESS_WIDTH" value="0" />
+  <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
+  <parameter name="MAX_BURST_SIZE" value="8" />
+  <parameter name="MAX_PENDING_RESPONSES" value="1" />
+  <parameter name="LINEWRAPBURSTS" value="0" />
+  <parameter name="PIPELINE_COMMAND" value="0" />
+  <parameter name="PIPELINE_RESPONSE" value="0" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+ </module>
+ <module
+   kind="altera_avalon_mm_bridge"
+   version="14.0"
+   enabled="1"
+   name="mm_bridge_s5">
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="SYMBOL_WIDTH" value="8" />
+  <parameter name="ADDRESS_WIDTH" value="18" />
+  <parameter name="SYSINFO_ADDR_WIDTH" value="10" />
+  <parameter name="USE_AUTO_ADDRESS_WIDTH" value="0" />
+  <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
+  <parameter name="MAX_BURST_SIZE" value="8" />
+  <parameter name="MAX_PENDING_RESPONSES" value="1" />
+  <parameter name="LINEWRAPBURSTS" value="0" />
+  <parameter name="PIPELINE_COMMAND" value="0" />
+  <parameter name="PIPELINE_RESPONSE" value="0" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+ </module>
+ <module
+   kind="altera_avalon_mm_bridge"
+   version="14.0"
+   enabled="1"
+   name="mm_bridge_s6">
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="SYMBOL_WIDTH" value="8" />
+  <parameter name="ADDRESS_WIDTH" value="18" />
+  <parameter name="SYSINFO_ADDR_WIDTH" value="10" />
+  <parameter name="USE_AUTO_ADDRESS_WIDTH" value="0" />
+  <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
+  <parameter name="MAX_BURST_SIZE" value="8" />
+  <parameter name="MAX_PENDING_RESPONSES" value="1" />
+  <parameter name="LINEWRAPBURSTS" value="0" />
+  <parameter name="PIPELINE_COMMAND" value="0" />
+  <parameter name="PIPELINE_RESPONSE" value="0" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+ </module>
+ <connection kind="clock" version="14.0" start="clk.clk" end="jtag_master.clk" />
+ <connection
+   kind="reset"
+   version="14.0"
+   start="clk.clk_reset"
+   end="jtag_master.clk_reset" />
+ <connection
+   kind="clock"
+   version="14.0"
+   start="clk.clk"
+   end="mm_bridge_master.clk" />
+ <connection
+   kind="reset"
+   version="14.0"
+   start="clk.clk_reset"
+   end="mm_bridge_master.reset" />
+ <connection
+   kind="avalon"
+   version="14.0"
+   start="jtag_master.master"
+   end="mm_bridge_master.s0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="14.0"
+   start="mm_bridge_master.m0"
+   end="mm_bridge_s0.s0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="14.0"
+   start="mm_bridge_master.m0"
+   end="mm_bridge_s1.s0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x01000000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="clock" version="14.0" start="clk.clk" end="mm_bridge_s0.clk" />
+ <connection
+   kind="reset"
+   version="14.0"
+   start="clk.clk_reset"
+   end="mm_bridge_s0.reset" />
+ <connection kind="clock" version="14.0" start="clk.clk" end="mm_bridge_s1.clk" />
+ <connection
+   kind="reset"
+   version="14.0"
+   start="clk.clk_reset"
+   end="mm_bridge_s1.reset" />
+ <connection kind="clock" version="14.0" start="clk.clk" end="mm_bridge_s2.clk" />
+ <connection
+   kind="reset"
+   version="14.0"
+   start="clk.clk_reset"
+   end="mm_bridge_s2.reset" />
+ <connection
+   kind="avalon"
+   version="14.0"
+   start="mm_bridge_master.m0"
+   end="mm_bridge_s2.s0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x01040000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="clock" version="14.0" start="clk.clk" end="mm_bridge_s3.clk" />
+ <connection
+   kind="reset"
+   version="14.0"
+   start="clk.clk_reset"
+   end="mm_bridge_s3.reset" />
+ <connection
+   kind="avalon"
+   version="14.0"
+   start="mm_bridge_master.m0"
+   end="mm_bridge_s3.s0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10000000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="reset"
+   version="14.0"
+   start="clk.clk_reset"
+   end="mm_bridge_s4.reset" />
+ <connection
+   kind="reset"
+   version="14.0"
+   start="clk.clk_reset"
+   end="mm_bridge_s5.reset" />
+ <connection kind="clock" version="14.0" start="clk.clk" end="mm_bridge_s4.clk" />
+ <connection kind="clock" version="14.0" start="clk.clk" end="mm_bridge_s5.clk" />
+ <connection
+   kind="avalon"
+   version="14.0"
+   start="mm_bridge_master.m0"
+   end="mm_bridge_s4.s0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x11000000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="14.0"
+   start="mm_bridge_master.m0"
+   end="mm_bridge_s5.s0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x11040000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection kind="clock" version="14.0" start="clk.clk" end="mm_bridge_s6.clk" />
+ <connection
+   kind="reset"
+   version="14.0"
+   start="clk.clk_reset"
+   end="mm_bridge_s6.reset" />
+ <connection
+   kind="avalon"
+   version="14.0"
+   start="mm_bridge_master.m0"
+   end="mm_bridge_s6.s0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x20000000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+</system>

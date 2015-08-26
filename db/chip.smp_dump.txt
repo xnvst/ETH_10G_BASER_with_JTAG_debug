@@ -1,0 +1,364 @@
+
+State Machine - |CHIP|avalon_mon:AVALON_MON_TOP_2|avalon_mon_onchip_memory2_0:onchip_memory2_0|avalon_st_mon:MON|monstate
+Name monstate.MONIDLE monstate.MONDONE monstate.MONACTIVE 
+monstate.MONIDLE 0 0 0 
+monstate.MONACTIVE 1 0 1 
+monstate.MONDONE 1 1 0 
+
+State Machine - |CHIP|avalon_gen:AVALON_GEN_TOP_2|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|ps
+Name ps.state_data ps.state_src_len_seq ps.state_dest_src ps.state_idle ps.state_transition 
+ps.state_idle 0 0 0 0 0 
+ps.state_dest_src 0 0 1 1 0 
+ps.state_src_len_seq 0 1 0 1 0 
+ps.state_data 1 0 0 1 0 
+ps.state_transition 0 0 0 1 1 
+
+State Machine - |CHIP|jtag_system:JTAG_SYSTEM_TOP|jtag_system_jtag_master:jtag_master|altera_avalon_packets_to_master:transacto|packets_to_master:p2m|state
+Name state.READ_SEND_WAIT state.READ_SEND_ISSUE state.READ_DATA_WAIT state.READ_CMD_WAIT state.READ_ASSERT state.RETURN_PACKET state.WRITE_WAIT state.GET_WRITE_DATA state.GET_ADDR4 state.GET_ADDR3 state.GET_ADDR2 state.GET_ADDR1 state.GET_SIZE2 state.GET_SIZE1 state.GET_EXTRA state.0000 
+state.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.GET_EXTRA 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.GET_SIZE1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.GET_SIZE2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.GET_ADDR1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.GET_ADDR2 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.GET_ADDR3 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.GET_ADDR4 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.GET_WRITE_DATA 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.WRITE_WAIT 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.RETURN_PACKET 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.READ_ASSERT 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_CMD_WAIT 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_DATA_WAIT 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_SEND_ISSUE 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.READ_SEND_WAIT 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |CHIP|avalon_gen:AVALON_GEN_TOP_2|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|crc_valid_count
+Name crc_valid_count.011 crc_valid_count.010 crc_valid_count.001 crc_valid_count.000 crc_valid_count.100 
+crc_valid_count.000 0 0 0 0 0 
+crc_valid_count.001 0 0 1 1 0 
+crc_valid_count.010 0 1 0 1 0 
+crc_valid_count.011 1 0 0 1 0 
+crc_valid_count.100 0 0 0 1 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_xgmii_termination:tx_eth_xgmii_termination|dic_value_reg
+Name dic_value_reg.11 dic_value_reg.10 dic_value_reg.01 dic_value_reg.00 
+dic_value_reg.00 0 0 0 0 
+dic_value_reg.01 0 0 1 1 
+dic_value_reg.10 0 1 0 1 
+dic_value_reg.11 1 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_tx_top:tx_top|altera_10gbaser_phy_clockcomp:tx_altera_10gbaser_phy_clockcomp|altera_10gbaser_phy_1588_latency:altera_10gbaser_phy_1588_latency|stratixv_10gbaser_1588_ppm_counter:sv_ppm_cntr|state
+Name state.BIT_19 state.BIT_17 state.BIT_14 state.00 
+state.00 0 0 0 0 
+state.BIT_14 0 0 1 1 
+state.BIT_17 0 1 0 1 
+state.BIT_19 1 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_rx_fifo_wrap:rx_clockcomp|altera_10gbaser_phy_rx_fifo:av_rx_fifo|altera_10gbaser_phy_1588_latency:altera_10gbaser_phy_1588_latency|stratixv_10gbaser_1588_ppm_counter:sv_ppm_cntr|state
+Name state.BIT_19 state.BIT_17 state.BIT_14 state.00 
+state.00 0 0 0 0 
+state.BIT_14 0 0 1 1 
+state.BIT_17 0 1 0 1 
+state.BIT_19 1 0 0 1 
+
+State Machine - |CHIP|avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|crc_valid_count
+Name crc_valid_count.011 crc_valid_count.010 crc_valid_count.001 crc_valid_count.000 crc_valid_count.100 
+crc_valid_count.000 0 0 0 0 0 
+crc_valid_count.001 0 0 1 1 0 
+crc_valid_count.010 0 1 0 1 0 
+crc_valid_count.011 1 0 0 1 0 
+crc_valid_count.100 0 0 0 1 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_xgmii_termination:tx_eth_xgmii_termination|dic_value_reg
+Name dic_value_reg.11 dic_value_reg.10 dic_value_reg.01 dic_value_reg.00 
+dic_value_reg.00 0 0 0 0 
+dic_value_reg.01 0 0 1 1 
+dic_value_reg.10 0 1 0 1 
+dic_value_reg.11 1 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_tx_top:tx_top|altera_10gbaser_phy_clockcomp:tx_altera_10gbaser_phy_clockcomp|altera_10gbaser_phy_1588_latency:altera_10gbaser_phy_1588_latency|stratixv_10gbaser_1588_ppm_counter:sv_ppm_cntr|state
+Name state.BIT_19 state.BIT_17 state.BIT_14 state.00 
+state.00 0 0 0 0 
+state.BIT_14 0 0 1 1 
+state.BIT_17 0 1 0 1 
+state.BIT_19 1 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_rx_fifo_wrap:rx_clockcomp|altera_10gbaser_phy_rx_fifo:av_rx_fifo|altera_10gbaser_phy_1588_latency:altera_10gbaser_phy_1588_latency|stratixv_10gbaser_1588_ppm_counter:sv_ppm_cntr|state
+Name state.BIT_19 state.BIT_17 state.BIT_14 state.00 
+state.00 0 0 0 0 
+state.BIT_14 0 0 1 1 
+state.BIT_17 0 1 0 1 
+state.BIT_19 1 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_lane_decoder:rx_eth_lane_decoder|empty
+Name empty.111 empty.110 empty.101 empty.100 empty.011 empty.010 empty.001 empty.000 
+empty.000 0 0 0 0 0 0 0 0 
+empty.001 0 0 0 0 0 0 1 1 
+empty.010 0 0 0 0 0 1 0 1 
+empty.011 0 0 0 0 1 0 0 1 
+empty.100 0 0 0 1 0 0 0 1 
+empty.101 0 0 1 0 0 0 0 1 
+empty.110 0 1 0 0 0 0 0 1 
+empty.111 1 0 0 0 0 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_lane_decoder:rx_eth_lane_decoder|empty
+Name empty.111 empty.110 empty.101 empty.100 empty.011 empty.010 empty.001 empty.000 
+empty.000 0 0 0 0 0 0 0 0 
+empty.001 0 0 0 0 0 0 1 1 
+empty.010 0 0 0 0 0 1 0 1 
+empty.011 0 0 0 0 1 0 0 1 
+empty.100 0 0 0 1 0 0 0 1 
+empty.101 0 0 1 0 0 0 0 1 
+empty.110 0 1 0 0 0 0 0 1 
+empty.111 1 0 0 0 0 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_10gmem_statistics_collector:rx_eth_statistics_collector|state
+Name state.STM_TYPE_RST_DONE state.STM_TYPE_RST_CNT state.STM_TYPE_INC_CNT state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 
+state.STM_TYPE_INC_CNT 0 0 1 1 
+state.STM_TYPE_RST_CNT 0 1 0 1 
+state.STM_TYPE_RST_DONE 1 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:eth_10g_design_example_0_mm_pipeline_bridge_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter_13_1|altera_merlin_burst_adapter_full_13_1:altera_merlin_burst_adapter_full.the_ba_13_1|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_eth_mdio:eth_mdio|state
+Name state.S_PREAMBLE3 state.S_PREAMBLE2 state.S_CTRL_CL45 state.S_WRITE_ADDR_CL45 state.S_ADDR_CL45 state.S_READ state.S_WRITE state.S_CTRL_CL22 state.S_IDLE state.S_PREAMBLE 
+state.S_PREAMBLE 0 0 0 0 0 0 0 0 0 0 
+state.S_IDLE 0 0 0 0 0 0 0 0 1 1 
+state.S_CTRL_CL22 0 0 0 0 0 0 0 1 0 1 
+state.S_WRITE 0 0 0 0 0 0 1 0 0 1 
+state.S_READ 0 0 0 0 0 1 0 0 0 1 
+state.S_ADDR_CL45 0 0 0 0 1 0 0 0 0 1 
+state.S_WRITE_ADDR_CL45 0 0 0 1 0 0 0 0 0 1 
+state.S_CTRL_CL45 0 0 1 0 0 0 0 0 0 1 
+state.S_PREAMBLE2 0 1 0 0 0 0 0 0 0 1 
+state.S_PREAMBLE3 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_10gmem_statistics_collector:rx_eth_statistics_collector|state
+Name state.STM_TYPE_RST_DONE state.STM_TYPE_RST_CNT state.STM_TYPE_INC_CNT state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 
+state.STM_TYPE_INC_CNT 0 0 1 1 
+state.STM_TYPE_RST_CNT 0 1 0 1 
+state.STM_TYPE_RST_DONE 1 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_ber:ber|altera_10gbaser_phy_ber_sm:altera_10gbaser_phy_ber_sm|altera_10gbaser_phy_ber_sm
+Name altera_10gbaser_phy_ber_sm.SET_HI_BER_CLR_TIMER altera_10gbaser_phy_ber_sm.SET_HI_BER altera_10gbaser_phy_ber_sm.MONITOR altera_10gbaser_phy_ber_sm.SET_GOOD_BER_CLR_TIMER 
+altera_10gbaser_phy_ber_sm.SET_GOOD_BER_CLR_TIMER 0 0 0 0 
+altera_10gbaser_phy_ber_sm.MONITOR 0 0 1 1 
+altera_10gbaser_phy_ber_sm.SET_HI_BER 0 1 0 1 
+altera_10gbaser_phy_ber_sm.SET_HI_BER_CLR_TIMER 1 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:eth_10g_design_example_0_mm_pipeline_bridge_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter_13_1|altera_merlin_burst_adapter_full_13_1:altera_merlin_burst_adapter_full.the_ba_13_1|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_eth_mdio:eth_mdio|state
+Name state.S_PREAMBLE3 state.S_PREAMBLE2 state.S_CTRL_CL45 state.S_WRITE_ADDR_CL45 state.S_ADDR_CL45 state.S_READ state.S_WRITE state.S_CTRL_CL22 state.S_IDLE state.S_PREAMBLE 
+state.S_PREAMBLE 0 0 0 0 0 0 0 0 0 0 
+state.S_IDLE 0 0 0 0 0 0 0 0 1 1 
+state.S_CTRL_CL22 0 0 0 0 0 0 0 1 0 1 
+state.S_WRITE 0 0 0 0 0 0 1 0 0 1 
+state.S_READ 0 0 0 0 0 1 0 0 0 1 
+state.S_ADDR_CL45 0 0 0 0 1 0 0 0 0 1 
+state.S_WRITE_ADDR_CL45 0 0 0 1 0 0 0 0 0 1 
+state.S_CTRL_CL45 0 0 1 0 0 0 0 0 0 1 
+state.S_PREAMBLE2 0 1 0 0 0 0 0 0 0 1 
+state.S_PREAMBLE3 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |CHIP|jtag_system:JTAG_SYSTEM_TOP|jtag_system_jtag_master:jtag_master|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|read_state
+Name read_state.ST_HEADER read_state.ST_READ_DATA read_state.ST_PADDED 
+read_state.ST_HEADER 0 0 0 
+read_state.ST_PADDED 1 0 1 
+read_state.ST_READ_DATA 1 1 0 
+
+State Machine - |CHIP|jtag_system:JTAG_SYSTEM_TOP|jtag_system_jtag_master:jtag_master|altera_avalon_st_jtag_interface:jtag_phy_embedded_in_jtag_master|altera_jtag_dc_streaming:normal.jtag_dc_streaming|altera_jtag_streaming:jtag_streaming|write_state
+Name write_state.ST_WRITE_DATA write_state.ST_HEADER_2 write_state.ST_HEADER_1 write_state.ST_BYPASS 
+write_state.ST_BYPASS 0 0 0 0 
+write_state.ST_HEADER_1 0 0 1 1 
+write_state.ST_HEADER_2 0 1 0 1 
+write_state.ST_WRITE_DATA 1 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_tx_top:tx_top|altera_10gbaser_phy_encode:encode|altera_10gbaser_phy_encode_type:ENCODE_PERLANE[0].TYPE|ctrl_in_enc
+Name ctrl_in_enc.1101 ctrl_in_enc.1100 ctrl_in_enc.1011 ctrl_in_enc.1010 ctrl_in_enc.1001 ctrl_in_enc.1000 ctrl_in_enc.0111 ctrl_in_enc.0110 ctrl_in_enc.0101 ctrl_in_enc.0100 ctrl_in_enc.0011 ctrl_in_enc.0010 ctrl_in_enc.0001 ctrl_in_enc.0000 
+ctrl_in_enc.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ctrl_in_enc.0001 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+ctrl_in_enc.0010 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+ctrl_in_enc.0011 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+ctrl_in_enc.0100 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+ctrl_in_enc.0101 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+ctrl_in_enc.0110 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+ctrl_in_enc.0111 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+ctrl_in_enc.1000 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1001 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1010 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1011 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1100 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1101 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |CHIP|avalon_mon:AVALON_MON_TOP|avalon_mon_onchip_memory2_0:onchip_memory2_0|avalon_st_mon:MON|monstate
+Name monstate.MONIDLE monstate.MONDONE monstate.MONACTIVE 
+monstate.MONIDLE 0 0 0 
+monstate.MONACTIVE 1 0 1 
+monstate.MONDONE 1 1 0 
+
+State Machine - |CHIP|LED_CONTROL:LED_CONTROL|state
+Name state.PASS state.WAIT state.PROGRESS state.IDLE state.FAIL 
+state.IDLE 0 0 0 0 0 
+state.PROGRESS 0 0 1 1 0 
+state.WAIT 0 1 0 1 0 
+state.PASS 1 0 0 1 0 
+state.FAIL 0 0 0 1 1 
+
+State Machine - |CHIP|avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|ps
+Name ps.state_data ps.state_src_len_seq ps.state_dest_src ps.state_idle ps.state_transition 
+ps.state_idle 0 0 0 0 0 
+ps.state_dest_src 0 0 1 1 0 
+ps.state_src_len_seq 0 1 0 1 0 
+ps.state_data 1 0 0 1 0 
+ps.state_transition 0 0 0 1 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_pad_inserter:tx_eth_pad_inserter|state
+Name state.BYPASS state.INSERT_LAST_BEAT state.INSERT_BEAT 
+state.BYPASS 0 0 0 
+state.INSERT_BEAT 1 0 1 
+state.INSERT_LAST_BEAT 1 1 0 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_tx_top:tx_top|altera_10gbaser_phy_encode:encode|altera_10gbaser_phy_encode_type:ENCODE_PERLANE[0].TYPE|ctrl_in_enc
+Name ctrl_in_enc.1101 ctrl_in_enc.1100 ctrl_in_enc.1011 ctrl_in_enc.1010 ctrl_in_enc.1001 ctrl_in_enc.1000 ctrl_in_enc.0111 ctrl_in_enc.0110 ctrl_in_enc.0101 ctrl_in_enc.0100 ctrl_in_enc.0011 ctrl_in_enc.0010 ctrl_in_enc.0001 ctrl_in_enc.0000 
+ctrl_in_enc.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ctrl_in_enc.0001 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+ctrl_in_enc.0010 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+ctrl_in_enc.0011 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+ctrl_in_enc.0100 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+ctrl_in_enc.0101 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+ctrl_in_enc.0110 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+ctrl_in_enc.0111 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+ctrl_in_enc.1000 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1001 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1010 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1011 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1100 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+ctrl_in_enc.1101 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_10gmem_statistics_collector:tx_eth_statistics_collector|state
+Name state.STM_TYPE_RST_DONE state.STM_TYPE_RST_CNT state.STM_TYPE_INC_CNT state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 
+state.STM_TYPE_INC_CNT 0 0 1 1 
+state.STM_TYPE_RST_CNT 0 1 0 1 
+state.STM_TYPE_RST_DONE 1 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_pause_ctrl_gen:tx_eth_pause_ctrl_gen|altera_eth_pause_controller:P_CTRL|state
+Name state.IDLE state.GENERATE_XOFF state.GENERATE_XON 
+state.IDLE 0 0 0 
+state.GENERATE_XON 1 0 1 
+state.GENERATE_XOFF 1 1 0 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_xgmii_termination:tx_eth_xgmii_termination|remainder_reg
+Name remainder_reg.0100 
+remainder_reg.1000 0 
+remainder_reg.0100 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_xgmii_termination:tx_eth_xgmii_termination|remainder_reg2
+Name remainder_reg2.0100 
+remainder_reg2.1000 0 
+remainder_reg2.0100 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_xgmii_termination:tx_eth_xgmii_termination|remainder_reg
+Name remainder_reg.0100 
+remainder_reg.1000 0 
+remainder_reg.0100 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_xgmii_termination:tx_eth_xgmii_termination|remainder_reg2
+Name remainder_reg2.0100 
+remainder_reg2.1000 0 
+remainder_reg2.0100 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_10gmem_statistics_collector:tx_eth_statistics_collector|state
+Name state.STM_TYPE_RST_DONE state.STM_TYPE_RST_CNT state.STM_TYPE_INC_CNT state.STM_TYPE_IDLE 
+state.STM_TYPE_IDLE 0 0 0 0 
+state.STM_TYPE_INC_CNT 0 0 1 1 
+state.STM_TYPE_RST_CNT 0 1 0 1 
+state.STM_TYPE_RST_DONE 1 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_pause_ctrl_gen:tx_eth_pause_ctrl_gen|altera_eth_pause_controller:P_CTRL|state
+Name state.IDLE state.GENERATE_XOFF state.GENERATE_XON 
+state.IDLE 0 0 0 
+state.GENERATE_XON 1 0 1 
+state.GENERATE_XOFF 1 1 0 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_rx_fifo_wrap:rx_clockcomp|altera_10gbaser_phy_rx_fifo:av_rx_fifo|wr_del_sm_basic
+Name wr_del_sm_basic.WR_ENABLE_BASIC 
+wr_del_sm_basic.WR_IDLE_BASIC 0 
+wr_del_sm_basic.WR_ENABLE_BASIC 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_ber:ber|altera_10gbaser_phy_ber_sm:altera_10gbaser_phy_ber_sm|altera_10gbaser_phy_ber_sm
+Name altera_10gbaser_phy_ber_sm.SET_HI_BER_CLR_TIMER altera_10gbaser_phy_ber_sm.SET_HI_BER altera_10gbaser_phy_ber_sm.MONITOR altera_10gbaser_phy_ber_sm.SET_GOOD_BER_CLR_TIMER 
+altera_10gbaser_phy_ber_sm.SET_GOOD_BER_CLR_TIMER 0 0 0 0 
+altera_10gbaser_phy_ber_sm.MONITOR 0 0 1 1 
+altera_10gbaser_phy_ber_sm.SET_HI_BER 0 1 0 1 
+altera_10gbaser_phy_ber_sm.SET_HI_BER_CLR_TIMER 1 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_blksync:blksync|altera_10gbaser_phy_lock_sm:altera_10gbaser_phy_lock_sm|altera_10gbaser_phy_lock_sm
+Name altera_10gbaser_phy_lock_sm.SH_INVALID_LOCK_RESET_SH_CNTRS altera_10gbaser_phy_lock_sm.SH_INVALID_LOCK altera_10gbaser_phy_lock_sm.SH_VALID_LOCK altera_10gbaser_phy_lock_sm.SH_VALID_LOCK_RESET_SH_CNTRS altera_10gbaser_phy_lock_sm.WAIT_FOR_SLIP_DONE altera_10gbaser_phy_lock_sm.SH_INVALID_NO_LOCK altera_10gbaser_phy_lock_sm.SH_VALID_NO_LOCK altera_10gbaser_phy_lock_sm.altera_10gbaser_phy_lock_sm_RESET 
+altera_10gbaser_phy_lock_sm.altera_10gbaser_phy_lock_sm_RESET 0 0 0 0 0 0 0 0 
+altera_10gbaser_phy_lock_sm.SH_VALID_NO_LOCK 0 0 0 0 0 0 1 1 
+altera_10gbaser_phy_lock_sm.SH_INVALID_NO_LOCK 0 0 0 0 0 1 0 1 
+altera_10gbaser_phy_lock_sm.WAIT_FOR_SLIP_DONE 0 0 0 0 1 0 0 1 
+altera_10gbaser_phy_lock_sm.SH_VALID_LOCK_RESET_SH_CNTRS 0 0 0 1 0 0 0 1 
+altera_10gbaser_phy_lock_sm.SH_VALID_LOCK 0 0 1 0 0 0 0 1 
+altera_10gbaser_phy_lock_sm.SH_INVALID_LOCK 0 1 0 0 0 0 0 1 
+altera_10gbaser_phy_lock_sm.SH_INVALID_LOCK_RESET_SH_CNTRS 1 0 0 0 0 0 0 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|qsys_10g_eth_10g_design_example_0_eth_10g_mac:eth_10g_mac|altera_eth_pad_inserter:tx_eth_pad_inserter|state
+Name state.BYPASS state.INSERT_LAST_BEAT state.INSERT_BEAT 
+state.BYPASS 0 0 0 
+state.INSERT_BEAT 1 0 1 
+state.INSERT_LAST_BEAT 1 1 0 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_rx_fifo_wrap:rx_clockcomp|altera_10gbaser_phy_rx_fifo:av_rx_fifo|rd_add_sm_basic
+Name rd_add_sm_basic.RD_IDLE rd_add_sm_basic.RD_INSERT rd_add_sm_basic.RD_ENABLE 
+rd_add_sm_basic.RD_IDLE 0 0 0 
+rd_add_sm_basic.RD_ENABLE 1 0 1 
+rd_add_sm_basic.RD_INSERT 1 1 0 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_rx_fifo_wrap:rx_clockcomp|altera_10gbaser_phy_rx_fifo:av_rx_fifo|rd_add_sm_basic_reg
+Name rd_add_sm_basic_reg.RD_IDLE rd_add_sm_basic_reg.RD_INSERT rd_add_sm_basic_reg.RD_ENABLE 
+rd_add_sm_basic_reg.RD_IDLE 0 0 0 
+rd_add_sm_basic_reg.RD_ENABLE 1 0 1 
+rd_add_sm_basic_reg.RD_INSERT 1 1 0 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_rx_fifo_wrap:rx_clockcomp|altera_10gbaser_phy_rx_fifo:av_rx_fifo|rd_add_sm_basic
+Name rd_add_sm_basic.RD_IDLE rd_add_sm_basic.RD_INSERT rd_add_sm_basic.RD_ENABLE 
+rd_add_sm_basic.RD_IDLE 0 0 0 
+rd_add_sm_basic.RD_ENABLE 1 0 1 
+rd_add_sm_basic.RD_INSERT 1 1 0 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP_2|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_rx_fifo_wrap:rx_clockcomp|altera_10gbaser_phy_rx_fifo:av_rx_fifo|rd_add_sm_basic_reg
+Name rd_add_sm_basic_reg.RD_IDLE rd_add_sm_basic_reg.RD_INSERT rd_add_sm_basic_reg.RD_ENABLE 
+rd_add_sm_basic_reg.RD_IDLE 0 0 0 
+rd_add_sm_basic_reg.RD_ENABLE 1 0 1 
+rd_add_sm_basic_reg.RD_INSERT 1 1 0 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_rx_fifo_wrap:rx_clockcomp|altera_10gbaser_phy_rx_fifo:av_rx_fifo|wr_del_sm_basic
+Name wr_del_sm_basic.WR_ENABLE_BASIC 
+wr_del_sm_basic.WR_IDLE_BASIC 0 
+wr_del_sm_basic.WR_ENABLE_BASIC 1 
+
+State Machine - |CHIP|qsys_10g:ETH10G_TOP|qsys_10g_eth_10g_design_example_0:eth_10g_design_example_0|altera_xcvr_10gbaser:altera_10gbaser|av_xcvr_10gbaser_nr:av_xcvr_10gbaser_nr_inst|av_xcvr_10gbaser_native:ch[0].av_xcvr_10gbaser_native_inst|alt_10gbaser_pcs:av_10gbaser_soft_pcs_inst|altera_10gbaser_phy_pcs_10g_top:pcs_10g_top_0|altera_10gbaser_phy_pcs_10g:pcs_10g_0|altera_10gbaser_phy_rx_top:rx_top|altera_10gbaser_phy_blksync:blksync|altera_10gbaser_phy_lock_sm:altera_10gbaser_phy_lock_sm|altera_10gbaser_phy_lock_sm
+Name altera_10gbaser_phy_lock_sm.SH_INVALID_LOCK_RESET_SH_CNTRS altera_10gbaser_phy_lock_sm.SH_INVALID_LOCK altera_10gbaser_phy_lock_sm.SH_VALID_LOCK altera_10gbaser_phy_lock_sm.SH_VALID_LOCK_RESET_SH_CNTRS altera_10gbaser_phy_lock_sm.WAIT_FOR_SLIP_DONE altera_10gbaser_phy_lock_sm.SH_INVALID_NO_LOCK altera_10gbaser_phy_lock_sm.SH_VALID_NO_LOCK altera_10gbaser_phy_lock_sm.altera_10gbaser_phy_lock_sm_RESET 
+altera_10gbaser_phy_lock_sm.altera_10gbaser_phy_lock_sm_RESET 0 0 0 0 0 0 0 0 
+altera_10gbaser_phy_lock_sm.SH_VALID_NO_LOCK 0 0 0 0 0 0 1 1 
+altera_10gbaser_phy_lock_sm.SH_INVALID_NO_LOCK 0 0 0 0 0 1 0 1 
+altera_10gbaser_phy_lock_sm.WAIT_FOR_SLIP_DONE 0 0 0 0 1 0 0 1 
+altera_10gbaser_phy_lock_sm.SH_VALID_LOCK_RESET_SH_CNTRS 0 0 0 1 0 0 0 1 
+altera_10gbaser_phy_lock_sm.SH_VALID_LOCK 0 0 1 0 0 0 0 1 
+altera_10gbaser_phy_lock_sm.SH_INVALID_LOCK 0 1 0 0 0 0 0 1 
+altera_10gbaser_phy_lock_sm.SH_INVALID_LOCK_RESET_SH_CNTRS 1 0 0 0 0 0 0 1 

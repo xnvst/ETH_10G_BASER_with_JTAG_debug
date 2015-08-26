@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Sun Nov 09 01:14:15 2014
+Quartus II 64-Bit Version : 14.0.1 Build 205 08/13/2014 SJ Full Version
+Revision Name : chip
+Top-level Entity Name : CHIP
+Family : Arria V
+Logic utilization (in ALMs) : N/A
+Total registers : 26696
+Total pins : 30
+Total virtual pins : 0
+Total block memory bits : 610,808
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 2
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 2
+Total PLLs : 2
+Total DLLs : 0

@@ -1,0 +1,921 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2011 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 11.0 Build 157 04/27/2011 Service Pack 0.sv1 SJ Full Version
+# Date created = 14:49:47  June 29, 2011
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		chip_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Arria V"
+set_global_assignment -name DEVICE 5ASTMD3E3F31I3
+set_global_assignment -name TOP_LEVEL_ENTITY CHIP
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "11.0 SP0.SV1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:49:47  JUNE 29, 2011"
+set_global_assignment -name LAST_QUARTUS_VERSION 14.0
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+#set_location_assignment PIN_AC39 -to CLK_50MHZ
+set_location_assignment PIN_V1 -to RXP_10G_BASE_R
+set_location_assignment PIN_V2 -to "RXP_10G_BASE_R(n)"
+set_location_assignment PIN_U3 -to TXP_10G_BASE_R
+set_location_assignment PIN_U4 -to "TXP_10G_BASE_R(n)"
+set_location_assignment PIN_W9 -to REFCLK
+set_location_assignment PIN_W8 -to "REFCLK(n)"
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE debugtest.stp
+set_global_assignment -name SEARCH_PATH DEMO/ -tag from_archive
+set_global_assignment -name SEARCH_PATH ETH10G_TOP/ -tag from_archive
+set_global_assignment -name SEARCH_PATH ETH10G_TOP/greybox_tmp/ -tag from_archive
+set_global_assignment -name SEARCH_PATH ETH10G_TOP/simulation/ -tag from_archive
+set_global_assignment -name SEARCH_PATH ETH10G_TOP/simulation/submodules/ -tag from_archive
+set_global_assignment -name SEARCH_PATH ETH10G_TOP/simulation/submodules/aldec/ -tag from_archive
+set_global_assignment -name SEARCH_PATH ETH10G_TOP/simulation/submodules/mentor/ -tag from_archive
+set_global_assignment -name SEARCH_PATH ETH10G_TOP/synthesis/ -tag from_archive
+set_global_assignment -name SEARCH_PATH ETH10G_TOP/synthesis/submodules/ -tag from_archive
+set_global_assignment -name SEARCH_PATH PLL/ -tag from_archive
+set_global_assignment -name SEARCH_PATH PLL/greybox_tmp/ -tag from_archive
+set_global_assignment -name SEARCH_PATH SIM/ -tag from_archive
+set_global_assignment -name SEARCH_PATH SYSTEM_CONTROLLER/ -tag from_archive
+set_global_assignment -name SEARCH_PATH TRAFFIC_CONTROLLER/ -tag from_archive
+set_global_assignment -name SEARCH_PATH TRAFFIC_CONTROLLER/alt_mf/ -tag from_archive
+set_global_assignment -name SEARCH_PATH TRAFFIC_CONTROLLER/alt_mf/tb/verilog/ -tag from_archive
+set_global_assignment -name SEARCH_PATH TRAFFIC_CONTROLLER/alt_mf/tb/vhdl/ -tag from_archive
+set_global_assignment -name SEARCH_PATH TRAFFIC_CONTROLLER/alt_mf/testbench/ -tag from_archive
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to RXP_10G_BASE_R
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to TXP_10G_BASE_R
+set_instance_assignment -name IO_STANDARD LVDS -to REFCLK
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SFPP_MOD_ABS
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SFPP_RATE_SEL[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SFPP_RATE_SEL[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SFPP_RX_LOS
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SFPP_TX_DIS
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SFPP_TX_FAULT
+set_location_assignment PIN_AF24 -to CLK_100MHZ
+set_location_assignment PIN_AH6 -to LEDHOST[2]
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id auto_signaltap_0
+set_location_assignment PIN_G27 -to SFPP_MOD_ABS
+set_location_assignment PIN_G26 -to SFPP_RATE_SEL[1]
+set_location_assignment PIN_D29 -to SFPP_RATE_SEL[0]
+set_location_assignment PIN_G29 -to SFPP_RX_LOS
+set_location_assignment PIN_E28 -to SFPP_TX_DIS
+set_location_assignment PIN_G30 -to SFPP_TX_FAULT
+set_instance_assignment -name IO_STANDARD "2.5 V" -to MDC
+set_instance_assignment -name IO_STANDARD "2.5 V" -to MDIO
+set_location_assignment PIN_AG8 -to LEDHOST[1]
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 1
+set_location_assignment PIN_AH8 -to LEDHOST[0]
+set_location_assignment PIN_AG6 -to LEDHOST[3]
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to CLK_100MHZ -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=1024" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=1024" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name IO_STANDARD "2.5 V" -to MDIO_2
+set_instance_assignment -name IO_STANDARD "2.5 V" -to MDC_2
+set_location_assignment PIN_H27 -to SFPP_MOD_ABS_2
+set_location_assignment PIN_F28 -to SFPP_RATE_SEL_2[1]
+set_location_assignment PIN_G28 -to SFPP_RATE_SEL_2[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SFPP_RATE_SEL_2[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SFPP_RATE_SEL_2[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SFPP_MOD_ABS_2
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SFPP_RX_LOS_2
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SFPP_TX_DIS_2
+set_instance_assignment -name IO_STANDARD "2.5 V" -to SFPP_TX_FAULT_2
+set_location_assignment PIN_H30 -to SFPP_RX_LOS_2
+set_location_assignment PIN_K30 -to SFPP_TX_DIS_2
+set_location_assignment PIN_K28 -to SFPP_TX_FAULT_2
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to RXP_10G_BASE_R_2
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to TXP_10G_BASE_R_2
+set_location_assignment PIN_N19 -to LEDHOST[7]
+set_location_assignment PIN_M19 -to LEDHOST[6]
+set_location_assignment PIN_N18 -to LEDHOST[5]
+set_location_assignment PIN_P19 -to LEDHOST[4]
+set_instance_assignment -name IO_STANDARD LVDS -to CLK_100MHZ
+set_location_assignment PIN_F30 -to MDC
+set_location_assignment PIN_H28 -to MDC_2
+set_location_assignment PIN_E30 -to MDIO
+set_location_assignment PIN_J30 -to MDIO_2
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "avalon_gen:AVALON_GEN_TOP_2|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|start" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[16] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[17] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[18] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[19] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[20] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[21] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[22] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[23] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[24] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[25] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[26] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[27] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[28] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[29] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[30] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[31] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[32] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[33] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|start" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[34] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[35] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[36] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[37] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[38] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[39] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[40] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[41] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[42] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[43] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[44] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[45] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[46] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[47] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[48] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[49] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[50] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[51] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[52] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[53] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[54] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[55] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[56] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[57] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[58] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[59] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[60] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[61] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[62] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[63] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[64] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[65] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[66] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[67] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[68] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[69] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[70] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[71] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[72] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[73] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[74] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_error" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[75] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_valid" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[76] -to "avalon_mon:AVALON_MON_TOP|mon_active" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[77] -to "avalon_mon:AVALON_MON_TOP|mon_done" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[78] -to "qsys_10g:ETH10G_TOP_2|rx_ready_export" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[79] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[80] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[81] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[82] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[83] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[84] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[85] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[86] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[87] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[88] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[89] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[90] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[91] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[92] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[93] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[94] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[95] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[96] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[97] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[98] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[99] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[100] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[101] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[102] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[103] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[104] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[105] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[106] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[107] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[108] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[109] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[110] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[111] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[112] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[113] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[114] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[115] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[116] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[117] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[118] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[119] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[120] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[121] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[122] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[123] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[124] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[125] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[126] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[127] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[128] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[129] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[130] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[131] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[132] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[133] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[134] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[135] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[136] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[137] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[138] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[139] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[140] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[141] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[142] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[143] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_empty[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[144] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_empty[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[145] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_empty[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[146] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_endofpacket" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[147] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_error[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[148] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_error[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[149] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_error[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[150] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_error[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[151] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_error[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[152] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_error[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[153] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_ready" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[154] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_startofpacket" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[155] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_valid" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[156] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[157] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[158] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[159] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[160] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[161] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[162] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[163] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[164] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[165] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[166] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[167] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[168] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[169] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[170] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[171] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[172] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[173] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[174] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[175] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[176] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[177] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[178] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[179] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[180] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[181] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[182] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[183] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[184] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[185] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[186] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[187] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[188] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[189] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[190] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[191] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[192] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[193] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[194] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[195] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[196] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[197] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[198] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[199] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[200] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[201] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[202] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[203] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[204] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[205] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[206] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[207] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[208] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[209] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[210] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[211] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[212] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[213] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[214] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[215] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[216] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[217] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[218] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[219] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[220] -to "qsys_10g:ETH10G_TOP|ref_clk_clk" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[221] -to "qsys_10g:ETH10G_TOP|rx_ready_export" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[222] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[223] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[224] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[225] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[226] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[227] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[228] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[229] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[230] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[231] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[232] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[233] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[234] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[235] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[236] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[237] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[238] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[239] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[240] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[241] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[242] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[243] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[244] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[245] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[246] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[247] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[248] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[249] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[250] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[251] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[252] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[253] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[254] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[255] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[256] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[257] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[258] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[259] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[260] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[261] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[262] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[263] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[264] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[265] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[266] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[267] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[268] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[269] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[270] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[271] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[272] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[273] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[274] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[275] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[276] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[277] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[278] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[279] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[280] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[281] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[282] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[283] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[284] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[285] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[286] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_endofpacket" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[287] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_ready" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[288] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_startofpacket" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[289] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_valid" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[290] -to "qsys_10g:ETH10G_TOP|tx_ready_export" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[291] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[292] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[293] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[294] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[295] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[296] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[297] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[298] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[299] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[300] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[301] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[302] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[303] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[304] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[305] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[306] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[307] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[308] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[309] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[310] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[311] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[312] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[313] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[314] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[315] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[316] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[317] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[318] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[319] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[320] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[321] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[322] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[323] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[324] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[325] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[326] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[327] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[328] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[329] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[330] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[331] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[332] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[333] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[334] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[335] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[336] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[337] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[338] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[339] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[340] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[341] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[342] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[343] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[344] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[345] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[346] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[347] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[348] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[349] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[350] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[351] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[352] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[353] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[354] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[355] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_endofpacket" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[356] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_error" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[357] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_ready" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[358] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_startofpacket" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[359] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_valid" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[360] -to "qsys_10g:ETH10G_TOP|xgmii_rx_clk_clk" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "avalon_gen:AVALON_GEN_TOP_2|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|start" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|byte_count[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|length[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "avalon_gen:AVALON_GEN_TOP|avalon_gen_onchip_memory2_0:onchip_memory2_0|avalon_st_gen:GEN|start" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[69] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[70] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[71] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[72] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[73] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_data[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[74] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_error" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[75] -to "avalon_mon:AVALON_MON_TOP|mac_rx_status_valid" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[76] -to "avalon_mon:AVALON_MON_TOP|mon_active" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[77] -to "avalon_mon:AVALON_MON_TOP|mon_done" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[78] -to "qsys_10g:ETH10G_TOP_2|rx_ready_export" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[79] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[80] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[81] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[82] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[83] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[84] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[85] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[86] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[87] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[88] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[89] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[90] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[91] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[92] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[93] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[94] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[95] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[96] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[97] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[98] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[99] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[100] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[101] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[102] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[103] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[104] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[105] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[106] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[107] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[108] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[109] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[110] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[111] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[112] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[113] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[114] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[115] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[116] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[117] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[118] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[119] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[120] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[121] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[122] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[123] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[124] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[125] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[126] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[127] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[128] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[129] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[130] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[131] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[132] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[133] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[134] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[135] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[136] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[137] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[138] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[139] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[140] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[141] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[142] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_data[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[143] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_empty[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[144] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_empty[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[145] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_empty[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[146] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_endofpacket" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[147] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_error[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[148] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_error[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[149] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_error[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[150] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_error[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[151] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_error[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[152] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_error[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[153] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_ready" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[154] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_startofpacket" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[155] -to "qsys_10g:ETH10G_TOP_2|rx_sc_fifo_out_valid" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[156] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[157] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[158] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[159] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[160] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[161] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[162] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[163] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[164] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[165] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[166] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[167] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[168] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[169] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[170] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[171] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[172] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[173] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[174] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[175] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[176] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[177] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[178] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[179] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[180] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[181] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[182] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[183] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[184] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[185] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[186] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[187] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[188] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[189] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[190] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[191] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[192] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[193] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[194] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[195] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[196] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[197] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[198] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[199] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[200] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[201] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[202] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[203] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[204] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[205] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[206] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[207] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[208] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[209] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[210] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[211] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[212] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[213] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[214] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[215] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[216] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[217] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[218] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[219] -to "qsys_10g:ETH10G_TOP_2|tx_sc_fifo_in_data[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[220] -to "qsys_10g:ETH10G_TOP|ref_clk_clk" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[221] -to "qsys_10g:ETH10G_TOP|rx_ready_export" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[222] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[223] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[224] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[225] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[226] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[227] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[228] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[229] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[230] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[231] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[232] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[233] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[234] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[235] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[236] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[237] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[238] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[239] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[240] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[241] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[242] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[243] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[244] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[245] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[246] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[247] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[248] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[249] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[250] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[251] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[252] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[253] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[254] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[255] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[256] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[257] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[258] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[259] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[260] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[261] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[262] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[263] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[264] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[265] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[266] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[267] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[268] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[269] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[270] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[271] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[272] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[273] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[274] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[275] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[276] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[277] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[278] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[279] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[280] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[281] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[282] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[283] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[284] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[285] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_data[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[286] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_endofpacket" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[287] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_ready" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[288] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_startofpacket" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[289] -to "qsys_10g:ETH10G_TOP|rx_sc_fifo_out_valid" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[290] -to "qsys_10g:ETH10G_TOP|tx_ready_export" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[291] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[0]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[292] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[10]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[293] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[11]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[294] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[12]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[295] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[13]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[296] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[14]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[297] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[15]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[298] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[16]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[299] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[17]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[300] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[18]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[301] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[19]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[302] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[1]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[303] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[20]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[304] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[21]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[305] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[22]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[306] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[23]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[307] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[24]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[308] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[25]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[309] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[26]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[310] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[27]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[311] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[28]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[312] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[29]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[313] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[2]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[314] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[30]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[315] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[31]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[316] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[32]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[317] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[33]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[318] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[34]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[319] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[35]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[320] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[36]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[321] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[37]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[322] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[38]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[323] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[39]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[324] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[3]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[325] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[40]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[326] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[41]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[327] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[42]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[328] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[43]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[329] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[44]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[330] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[45]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[331] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[46]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[332] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[47]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[333] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[48]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[334] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[49]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[335] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[4]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[336] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[50]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[337] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[51]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[338] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[52]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[339] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[53]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[340] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[54]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[341] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[55]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[342] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[56]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[343] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[57]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[344] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[58]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[345] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[59]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[346] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[5]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[347] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[60]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[348] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[61]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[349] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[62]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[350] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[63]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[351] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[6]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[352] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[7]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[353] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[8]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[354] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_data[9]" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[355] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_endofpacket" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[356] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_error" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[357] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_ready" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[358] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_startofpacket" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[359] -to "qsys_10g:ETH10G_TOP|tx_sc_fifo_in_valid" -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[360] -to "qsys_10g:ETH10G_TOP|xgmii_rx_clk_clk" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=361" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=361" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=361" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=1107" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_global_assignment -name QIP_FILE avalon_sysctrl/synthesis/avalon_sysctrl.qip
+set_global_assignment -name QIP_FILE avalon_dc_fifo/synthesis/avalon_dc_fifo.qip
+set_global_assignment -name SDC_FILE CHIP.sdc
+set_global_assignment -name QIP_FILE avalon_mon/synthesis/avalon_mon.qip
+set_global_assignment -name QIP_FILE avalon_gen/synthesis/avalon_gen.qip
+set_global_assignment -name QIP_FILE jtag_system/synthesis/jtag_system.qip
+set_global_assignment -name QIP_FILE qsys_10g/synthesis/qsys_10g.qip
+set_global_assignment -name VERILOG_FILE LED_CTRL_MUX.v
+set_global_assignment -name VERILOG_FILE LED_CONTROL.v
+set_global_assignment -name QIP_FILE PLL/sys_pll.qip
+set_global_assignment -name VERILOG_FILE CHIP.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SLD_FILE db/debugtest_auto_stripped.stp

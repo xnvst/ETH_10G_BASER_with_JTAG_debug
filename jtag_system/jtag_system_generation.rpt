@@ -1,0 +1,184 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest --output-directory=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\simulation --file-set=SIM_VERILOG --report-file=html:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\jtag_system.html --report-file=sopcinfo:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system.sopcinfo --report-file=csv:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\jtag_system.csv --report-file=spd:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\jtag_system.spd --report-file=cmp:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\jtag_system.cmp --report-file=sip:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\simulation\jtag_system.sip --system-info=DEVICE_FAMILY="Arria V" --system-info=DEVICE=5ASTMD3E3F31I3 --system-info=DEVICE_SPEEDGRADE=3_H3 --component-file=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system.qsys
+Progress: Loading ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system.qsys
+Progress: Reading input file
+Progress: Adding clk [clock_source 14.0]
+Progress: Parameterizing module clk
+Progress: Adding jtag_master [altera_jtag_avalon_master 14.0]
+Progress: Parameterizing module jtag_master
+Progress: Adding mm_bridge_master [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_master
+Progress: Adding mm_bridge_s0 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s0
+Progress: Adding mm_bridge_s1 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s1
+Progress: Adding mm_bridge_s2 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s2
+Progress: Adding mm_bridge_s3 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s3
+Progress: Adding mm_bridge_s4 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s4
+Progress: Adding mm_bridge_s5 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s5
+Progress: Adding mm_bridge_s6 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s6
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: jtag_system.clk: The input clock frequency must be known or set by the parent if this is a subsystem.
+Info: jtag_system: Generating jtag_system "jtag_system" for SIM_VERILOG
+Info: jtag_master: "jtag_system" instantiated altera_jtag_avalon_master "jtag_master"
+Info: mm_bridge_master: "jtag_system" instantiated altera_avalon_mm_bridge "mm_bridge_master"
+Info: mm_interconnect_0: "jtag_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: mm_interconnect_1: "jtag_system" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: rst_controller: "jtag_system" instantiated altera_reset_controller "rst_controller"
+Info: jtag_phy_embedded_in_jtag_master: "jtag_master" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "jtag_master" instantiated timing_adapter "timing_adt"
+Info: fifo: "jtag_master" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "jtag_master" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "jtag_master" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "jtag_master" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "jtag_master" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "jtag_master" instantiated channel_adapter "p2b_adapter"
+Info: jtag_master_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "jtag_master_master_translator"
+Info: mm_bridge_master_s0_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "mm_bridge_master_s0_translator"
+Info: jtag_master_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "jtag_master_master_agent"
+Info: mm_bridge_master_s0_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "mm_bridge_master_s0_agent"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/simulation/submodules/altera_merlin_arbitrator.sv
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
+Info: mm_bridge_master_m0_limiter: "mm_interconnect_1" instantiated altera_merlin_traffic_limiter "mm_bridge_master_m0_limiter"
+Info: Reusing file D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/simulation/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/simulation/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/simulation/submodules/altera_merlin_arbitrator.sv
+Info: jtag_system: Done "jtag_system" with 30 modules, 45 files
+Info: ip-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\jtag_system.spd --output-directory=D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/simulation/
+Info: Doing: ip-make-simscript --spd=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\jtag_system.spd --output-directory=D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/simulation/
+Info: Generating the following file(s) for MODELSIM simulator in D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	24 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest --output-directory=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system --report-file=bsf:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\jtag_system.bsf --system-info=DEVICE_FAMILY="Arria V" --system-info=DEVICE=5ASTMD3E3F31I3 --system-info=DEVICE_SPEEDGRADE=3_H3 --component-file=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system.qsys
+Progress: Loading ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system.qsys
+Progress: Reading input file
+Progress: Adding clk [clock_source 14.0]
+Progress: Parameterizing module clk
+Progress: Adding jtag_master [altera_jtag_avalon_master 14.0]
+Progress: Parameterizing module jtag_master
+Progress: Adding mm_bridge_master [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_master
+Progress: Adding mm_bridge_s0 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s0
+Progress: Adding mm_bridge_s1 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s1
+Progress: Adding mm_bridge_s2 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s2
+Progress: Adding mm_bridge_s3 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s3
+Progress: Adding mm_bridge_s4 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s4
+Progress: Adding mm_bridge_s5 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s5
+Progress: Adding mm_bridge_s6 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s6
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: jtag_system.clk: The input clock frequency must be known or set by the parent if this is a subsystem.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest --output-directory=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\synthesis --file-set=QUARTUS_SYNTH --report-file=html:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\jtag_system.html --report-file=sopcinfo:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system.sopcinfo --report-file=cmp:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\jtag_system.cmp --report-file=qip:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\synthesis\jtag_system.qip --report-file=svd:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\synthesis\jtag_system.svd --report-file=regmap:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\synthesis\jtag_system.regmap --report-file=xml:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\jtag_system.xml --report-file=debuginfo:D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system\synthesis\jtag_system.debuginfo --system-info=DEVICE_FAMILY="Arria V" --system-info=DEVICE=5ASTMD3E3F31I3 --system-info=DEVICE_SPEEDGRADE=3_H3 --component-file=D:\pervices-project\10GE\jtag-test_pervices\ETH_10GBASER_DEMO_DESIGN-jtagtest\jtag_system.qsys --language=VERILOG
+Progress: Loading ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system.qsys
+Progress: Reading input file
+Progress: Adding clk [clock_source 14.0]
+Progress: Parameterizing module clk
+Progress: Adding jtag_master [altera_jtag_avalon_master 14.0]
+Progress: Parameterizing module jtag_master
+Progress: Adding mm_bridge_master [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_master
+Progress: Adding mm_bridge_s0 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s0
+Progress: Adding mm_bridge_s1 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s1
+Progress: Adding mm_bridge_s2 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s2
+Progress: Adding mm_bridge_s3 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s3
+Progress: Adding mm_bridge_s4 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s4
+Progress: Adding mm_bridge_s5 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s5
+Progress: Adding mm_bridge_s6 [altera_avalon_mm_bridge 14.0]
+Progress: Parameterizing module mm_bridge_s6
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: jtag_system.clk: The input clock frequency must be known or set by the parent if this is a subsystem.
+Info: jtag_system: Generating jtag_system "jtag_system" for QUARTUS_SYNTH
+Info: jtag_master: "jtag_system" instantiated altera_jtag_avalon_master "jtag_master"
+Info: mm_bridge_master: "jtag_system" instantiated altera_avalon_mm_bridge "mm_bridge_master"
+Info: mm_interconnect_0: "jtag_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: mm_interconnect_1: "jtag_system" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: rst_controller: "jtag_system" instantiated altera_reset_controller "rst_controller"
+Info: jtag_phy_embedded_in_jtag_master: "jtag_master" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "jtag_master" instantiated timing_adapter "timing_adt"
+Info: fifo: "jtag_master" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "jtag_master" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "jtag_master" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "jtag_master" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "jtag_master" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "jtag_master" instantiated channel_adapter "p2b_adapter"
+Info: jtag_master_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "jtag_master_master_translator"
+Info: mm_bridge_master_s0_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "mm_bridge_master_s0_translator"
+Info: jtag_master_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "jtag_master_master_agent"
+Info: mm_bridge_master_s0_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "mm_bridge_master_s0_agent"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
+Info: mm_bridge_master_m0_limiter: "mm_interconnect_1" instantiated altera_merlin_traffic_limiter "mm_bridge_master_m0_limiter"
+Info: Reusing file D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/jtag_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: jtag_system: Done "jtag_system" with 30 modules, 45 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

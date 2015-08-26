@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2014.11.06.21:36:38"
+ outputDirectory="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Arria V"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="5ASTMD3E3F31I3"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_INT_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_INT_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_INT_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_EXT_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_EXT_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_EXT_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="reset_ext" kind="reset" start="0">
+   <property name="associatedClock" value="" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="reset_ext_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="clk_int" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk_int_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="reset_int" kind="reset" start="0">
+   <property name="associatedClock" value="" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="reset_int_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="clk_ext" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk_ext_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="dc_fifo_in" kind="avalon_streaming" start="0">
+   <property name="associatedClock" value="clk_ext" />
+   <property name="associatedReset" value="reset_ext" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="8" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="8" />
+   <port name="dc_fifo_in_data" direction="input" role="data" width="64" />
+   <port name="dc_fifo_in_valid" direction="input" role="valid" width="1" />
+   <port name="dc_fifo_in_ready" direction="output" role="ready" width="1" />
+  </interface>
+  <interface name="dc_fifo_out" kind="avalon_streaming" start="1">
+   <property name="associatedClock" value="clk_int" />
+   <property name="associatedReset" value="reset_int" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="8" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="8" />
+   <port name="dc_fifo_out_data" direction="output" role="data" width="64" />
+   <port name="dc_fifo_out_valid" direction="output" role="valid" width="1" />
+   <port name="dc_fifo_out_ready" direction="input" role="ready" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="avalon_dc_fifo:1.0:AUTO_CLK_EXT_CLOCK_DOMAIN=-1,AUTO_CLK_EXT_CLOCK_RATE=-1,AUTO_CLK_EXT_RESET_DOMAIN=-1,AUTO_CLK_INT_CLOCK_DOMAIN=-1,AUTO_CLK_INT_CLOCK_RATE=-1,AUTO_CLK_INT_RESET_DOMAIN=-1,AUTO_DEVICE=5ASTMD3E3F31I3,AUTO_DEVICE_FAMILY=Arria V,AUTO_GENERATION_ID=1415327798,AUTO_UNIQUE_ID=(clock_source:14.0:clockFrequency=50000000,clockFrequencyKnown=false,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_avalon_dc_fifo:14.0:AUTO_DEVICE_FAMILY=Arria V,BITS_PER_SYMBOL=8,CHANNEL_WIDTH=0,ENABLE_EXPLICIT_MAXCHANNEL=false,ERROR_WIDTH=0,EXPLICIT_MAXCHANNEL=0,FIFO_DEPTH=512,RD_SYNC_DEPTH=2,SYMBOLS_PER_BEAT=8,USE_IN_FILL_LEVEL=0,USE_OUT_FILL_LEVEL=0,USE_PACKETS=0,WR_SYNC_DEPTH=2)(clock_source:14.0:clockFrequency=50000000,clockFrequencyKnown=false,inputClockFrequency=0,resetSynchronousEdges=NONE)(reset:14.0:)(clock:14.0:)(clock:14.0:)(reset:14.0:)"
+   instancePathKey="avalon_dc_fifo"
+   kind="avalon_dc_fifo"
+   version="1.0"
+   name="avalon_dc_fifo">
+  <parameter name="AUTO_CLK_INT_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_CLK_INT_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_CLK_INT_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_EXT_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_DEVICE" value="5ASTMD3E3F31I3" />
+  <parameter name="AUTO_GENERATION_ID" value="1415327798" />
+  <parameter name="AUTO_CLK_EXT_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_EXT_CLOCK_DOMAIN" value="-1" />
+  <generatedFiles>
+   <file
+       path="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/synthesis/avalon_dc_fifo.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/synthesis/submodules/altera_avalon_dc_fifo.v"
+       type="VERILOG" />
+   <file
+       path="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/synthesis/submodules/altera_dcfifo_synchronizer_bundle.v"
+       type="VERILOG" />
+   <file
+       path="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/synthesis/submodules/altera_avalon_dc_fifo.sdc"
+       type="SDC" />
+   <file
+       path="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/synthesis/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/synthesis/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/synthesis/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/altera/14.0/ip/altera/sopc_builder_ip/altera_avalon_dc_fifo/altera_avalon_dc_fifo_hw.tcl" />
+   <file
+       path="C:/altera/14.0/ip/altera/sopc_builder_ip/altera_avalon_dc_fifo/altera_avalon_dc_fifo.v" />
+   <file
+       path="C:/altera/14.0/ip/altera/sopc_builder_ip/altera_avalon_dc_fifo/altera_dcfifo_synchronizer_bundle.v" />
+   <file
+       path="C:/altera/14.0/ip/altera/sopc_builder_ip/altera_avalon_dc_fifo/altera_avalon_dc_fifo.sdc" />
+   <file
+       path="C:/altera/14.0/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="avalon_dc_fifo">queue size: 0 starting:avalon_dc_fifo "avalon_dc_fifo"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>3</b> modules, <b>4</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>5</b> modules, <b>8</b> connections]]></message>
+   <message level="Debug" culprit="avalon_dc_fifo"><![CDATA["<b>avalon_dc_fifo</b>" reuses <b>altera_avalon_dc_fifo</b> "<b>submodules/altera_avalon_dc_fifo</b>"]]></message>
+   <message level="Debug" culprit="avalon_dc_fifo"><![CDATA["<b>avalon_dc_fifo</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Debug" culprit="avalon_dc_fifo"><![CDATA["<b>avalon_dc_fifo</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Debug" culprit="avalon_dc_fifo">queue size: 2 starting:altera_avalon_dc_fifo "submodules/altera_avalon_dc_fifo"</message>
+   <message level="Info" culprit="dc_fifo"><![CDATA["<b>avalon_dc_fifo</b>" instantiated <b>altera_avalon_dc_fifo</b> "<b>dc_fifo</b>"]]></message>
+   <message level="Debug" culprit="avalon_dc_fifo">queue size: 1 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>avalon_dc_fifo</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_avalon_dc_fifo:14.0:AUTO_DEVICE_FAMILY=Arria V,BITS_PER_SYMBOL=8,CHANNEL_WIDTH=0,ENABLE_EXPLICIT_MAXCHANNEL=false,ERROR_WIDTH=0,EXPLICIT_MAXCHANNEL=0,FIFO_DEPTH=512,RD_SYNC_DEPTH=2,SYMBOLS_PER_BEAT=8,USE_IN_FILL_LEVEL=0,USE_OUT_FILL_LEVEL=0,USE_PACKETS=0,WR_SYNC_DEPTH=2"
+   instancePathKey="avalon_dc_fifo:.:dc_fifo"
+   kind="altera_avalon_dc_fifo"
+   version="14.0"
+   name="altera_avalon_dc_fifo">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+  <generatedFiles>
+   <file
+       path="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/synthesis/submodules/altera_avalon_dc_fifo.v"
+       type="VERILOG" />
+   <file
+       path="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/synthesis/submodules/altera_dcfifo_synchronizer_bundle.v"
+       type="VERILOG" />
+   <file
+       path="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/synthesis/submodules/altera_avalon_dc_fifo.sdc"
+       type="SDC" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/14.0/ip/altera/sopc_builder_ip/altera_avalon_dc_fifo/altera_avalon_dc_fifo_hw.tcl" />
+   <file
+       path="C:/altera/14.0/ip/altera/sopc_builder_ip/altera_avalon_dc_fifo/altera_avalon_dc_fifo.v" />
+   <file
+       path="C:/altera/14.0/ip/altera/sopc_builder_ip/altera_avalon_dc_fifo/altera_dcfifo_synchronizer_bundle.v" />
+   <file
+       path="C:/altera/14.0/ip/altera/sopc_builder_ip/altera_avalon_dc_fifo/altera_avalon_dc_fifo.sdc" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="avalon_dc_fifo" as="dc_fifo" />
+  <messages>
+   <message level="Debug" culprit="avalon_dc_fifo">queue size: 2 starting:altera_avalon_dc_fifo "submodules/altera_avalon_dc_fifo"</message>
+   <message level="Info" culprit="dc_fifo"><![CDATA["<b>avalon_dc_fifo</b>" instantiated <b>altera_avalon_dc_fifo</b> "<b>dc_fifo</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_reset_controller:14.0:ADAPT_RESET_REQUEST=0,AUTO_CLK_CLOCK_RATE=-1,MIN_RST_ASSERTION_TIME=3,NUM_RESET_INPUTS=1,OUTPUT_RESET_SYNC_EDGES=deassert,RESET_REQUEST_PRESENT=0,RESET_REQ_EARLY_DSRT_TIME=1,RESET_REQ_WAIT_TIME=1,SYNC_DEPTH=2,USE_RESET_REQUEST_IN0=0,USE_RESET_REQUEST_IN1=0,USE_RESET_REQUEST_IN10=0,USE_RESET_REQUEST_IN11=0,USE_RESET_REQUEST_IN12=0,USE_RESET_REQUEST_IN13=0,USE_RESET_REQUEST_IN14=0,USE_RESET_REQUEST_IN15=0,USE_RESET_REQUEST_IN2=0,USE_RESET_REQUEST_IN3=0,USE_RESET_REQUEST_IN4=0,USE_RESET_REQUEST_IN5=0,USE_RESET_REQUEST_IN6=0,USE_RESET_REQUEST_IN7=0,USE_RESET_REQUEST_IN8=0,USE_RESET_REQUEST_IN9=0,USE_RESET_REQUEST_INPUT=0"
+   instancePathKey="avalon_dc_fifo:.:rst_controller"
+   kind="altera_reset_controller"
+   version="14.0"
+   name="altera_reset_controller">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <generatedFiles>
+   <file
+       path="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/synthesis/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/synthesis/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/pervices-project/10GE/jtag-test_pervices/ETH_10GBASER_DEMO_DESIGN-jtagtest/avalon_dc_fifo/synthesis/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/altera/14.0/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="avalon_dc_fifo" as="rst_controller,rst_controller_001" />
+  <messages>
+   <message level="Debug" culprit="avalon_dc_fifo">queue size: 1 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>avalon_dc_fifo</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

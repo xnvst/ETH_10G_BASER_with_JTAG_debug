@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element $${FILENAME}
+   {
+   }
+   element clk_ext
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element clk_int
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element dc_fifo
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5ASTMD3E3F31I3" />
+ <parameter name="deviceFamily" value="Arria V" />
+ <parameter name="deviceSpeedGrade" value="3_H3" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="chip.qpf" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface
+   name="reset_ext"
+   internal="clk_ext.clk_in_reset"
+   type="reset"
+   dir="end" />
+ <interface name="clk_int" internal="clk_int.clk_in" type="clock" dir="end" />
+ <interface
+   name="reset_int"
+   internal="clk_int.clk_in_reset"
+   type="reset"
+   dir="end" />
+ <interface name="clk_ext" internal="clk_ext.clk_in" type="clock" dir="end" />
+ <interface
+   name="dc_fifo_in"
+   internal="dc_fifo.in"
+   type="avalon_streaming"
+   dir="end" />
+ <interface
+   name="dc_fifo_out"
+   internal="dc_fifo.out"
+   type="avalon_streaming"
+   dir="start" />
+ <module kind="clock_source" version="14.0" enabled="1" name="clk_ext">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="false" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   kind="altera_avalon_dc_fifo"
+   version="14.0"
+   enabled="1"
+   name="dc_fifo">
+  <parameter name="SYMBOLS_PER_BEAT" value="8" />
+  <parameter name="BITS_PER_SYMBOL" value="8" />
+  <parameter name="FIFO_DEPTH" value="512" />
+  <parameter name="CHANNEL_WIDTH" value="0" />
+  <parameter name="ERROR_WIDTH" value="0" />
+  <parameter name="USE_PACKETS" value="0" />
+  <parameter name="USE_IN_FILL_LEVEL" value="0" />
+  <parameter name="USE_OUT_FILL_LEVEL" value="0" />
+  <parameter name="WR_SYNC_DEPTH" value="2" />
+  <parameter name="RD_SYNC_DEPTH" value="2" />
+  <parameter name="ENABLE_EXPLICIT_MAXCHANNEL" value="false" />
+  <parameter name="EXPLICIT_MAXCHANNEL" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Arria V" />
+ </module>
+ <module kind="clock_source" version="14.0" enabled="1" name="clk_int">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="false" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <connection
+   kind="reset"
+   version="14.0"
+   start="clk_ext.clk_reset"
+   end="dc_fifo.in_clk_reset" />
+ <connection kind="clock" version="14.0" start="clk_ext.clk" end="dc_fifo.in_clk" />
+ <connection kind="clock" version="14.0" start="clk_int.clk" end="dc_fifo.out_clk" />
+ <connection
+   kind="reset"
+   version="14.0"
+   start="clk_int.clk_reset"
+   end="dc_fifo.out_clk_reset" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+</system>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="fpga_btn_0" source="Pin Planner" >
+		</pin>
+		<pin name="clk_clk" source="Pin Planner" >
+		</pin>
+		<pin name="led_export[3]" source="Pin Planner" >
+		</pin>
+		<pin name="led_export[2]" source="Pin Planner" >
+		</pin>
+		<pin name="led_export[1]" source="Pin Planner" >
+		</pin>
+		<pin name="led_export[0]" source="Pin Planner" >
+		</pin>
+		<pin name="button_export[0]" source="Pin Planner" >
+		</pin>
+		<pin name="button_export[3]" source="Pin Planner" >
+		</pin>
+		<pin name="button_export[2]" source="Pin Planner" >
+		</pin>
+		<pin name="button_export[1]" source="Pin Planner" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

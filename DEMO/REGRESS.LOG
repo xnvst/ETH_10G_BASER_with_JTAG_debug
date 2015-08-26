@@ -1,0 +1,89 @@
+
+
+
+	 	==================================================================================== 
+		                 == Test Iteration 1 :Burst size 2 == 			  		
+	 	==================================================================================== 
+
+
+	 	==================================================================================== 
+				B E G I N     C O N F I G U R A T I O N        			     				
+	 	==================================================================================== 
+	 		-- MONITOR Received  Packet# 	 0 
+	 		-- MONITOR Received  Packet# 	 0 
+				-- WARNING! - monitor unable to receive any packet ..... 
+
+		       ===================================================================
+			|  MAC TX STATS REGISTER CHECK					  
+	 	       ===================================================================
+			|# FRAMES_RECEIVED_WITH_ERROR         	= 0
+			|# UNICAST_FRAMES_WITH_ERROR     	= 0
+			|# MULTICAST_FRAMES_RECEIVED_WITH_ERROR = 0
+			|# BRDCAST_FRAMES_WITH_ERROR   		= 0
+			|# FRAMES_RECEIVED_WITH_ONLY_CRCERROR 	= 0
+			|# VALID_LENGTH_FRAMES_WITH_CRC_ERROR   = 0
+			|# JABBER_FRAMES                	= 0
+			|# FRAGMENTED_FRAMES                	= 0
+			|# INVALID_FRAMES_RECEIVED             	= 0
+			|# FRAMES_RECEIVED_GOOD	 		= 2
+			|# PAUSE_FRAMES_RECEIVED   		= 0
+			|# UNICAST_CONTROL_FRAMES              	= 0
+			|# MULTICAST_CONTROL_FRAMES            	= 0
+			|# UNICAST_FRAMES_RECEIVED_GOOD   	= 2
+			|# MULTICAST_FRAMES_RECEIVED_GOOD 	= 0
+			|# BRDCAST_FRAMES_GOOD    		= 0
+			|# DATA_AND_PADDING_OCTETS_RECEIVED_GOOD= 238
+			|# COMPREHENSICE_OCTETS_RECEIVED       	= 292
+			|# FRAMES_WITH_SIZE_64_BYTES            = 0
+			|# FRAMES_BETWEEN_SIZE_64AND127_BYTES   = 1
+			|# FRAMES_BETWEEN_SIZE_128AND255_BYTES  = 1
+			|# FRAMES_BETWEEN_SIZE_256AND511_BYTES  = 0
+			|# FRAMES_BETWEEN_SIZE_512AND1K_BYTES   = 0
+			|# FRAMES_BETWEEN_SIZE_1KND1518_BYTES   = 0
+	 	       ======================================================================
+			|  MAC RX STATS REGISTER CHECK					     
+	 	       ======================================================================
+			|# FRAMES_RECEIVED_WITH_ERROR         	= 0
+			|# UNICAST_FRAMES_WITH_ERROR     	= 0
+			|# MULTICAST_FRAMES_RECEIVED_WITH_ERROR = 0
+			|# BRDCAST_FRAMES_WITH_ERROR   		= 0
+			|# FRAMES_RECEIVED_WITH_ONLY_CRCERROR 	= 0
+			|# VALID_LENGTH_FRAMES_WITH_CRC_ERROR   = 0
+			|# JABBER_FRAMES                	= 0
+			|# FRAGMENTED_FRAMES                	= 0
+			|# INVALID_FRAMES_RECEIVED             	= 0
+			|# FRAMES_RECEIVED_GOOD	 		= 0
+			|# PAUSE_FRAMES_RECEIVED   		= 0
+			|# UNICAST_CONTROL_FRAMES              	= 0
+			|# MULTICAST_CONTROL_FRAMES            	= 0
+			|# UNICAST_FRAMES_RECEIVED_GOOD   	= 0
+			|# MULTICAST_FRAMES_RECEIVED_GOOD 	= 0
+			|# BRDCAST_FRAMES_GOOD    		= 0
+			|# DATA_AND_PADDING_OCTETS_RECEIVED_GOOD= 0
+			|# COMPREHENSICE_OCTETS_RECEIVED       	= 0
+			|# FRAMES_WITH_SIZE_64_BYTES            = 0
+			|# FRAMES_BETWEEN_SIZE_64AND127_BYTES   = 0
+			|# FRAMES_BETWEEN_SIZE_128AND255_BYTES  = 0
+			|# FRAMES_BETWEEN_SIZE_256AND511_BYTES  = 0
+			|# FRAMES_BETWEEN_SIZE_512AND1K_BYTES   = 0
+			|# FRAMES_BETWEEN_SIZE_1KND1518_BYTES   = 0
+	 	  ==========================================================================
+	 		| MAC CONFIGURATION DUMP 					      
+	 	  ===========================================================================
+	 		| RX PAD/CRC SRIPPING		= 0x00000003
+	 		| RX FIFO DROP ON ERROR 	= 0x00000000
+	 		| LOCAL LOOPBACK @ XGMII	= 0x00000000
+	 		| LOCAL LOOPBACK @ PMA		= 0x00000000
+	 		| MAC TX SADDR INSERTION CTRL 	= 0x00000000
+	 		| PRIMARY MAC ADDRESS-1		= 0x0000c5c4 
+	 		| PRIMARY MAC ADDRESS-0		= 0xc3c2c1c0 
+	 		| MAX FRAME LENGTH 		= 0x000005ee 
+	 		| SUPPLIMENTARY ADDRESS-0 	= 0x00000000
+	 		| 		            	  0x00000000
+	 		| SUPPLIMENTARY ADDRESS-1	= 0x00000000
+	 		| 			    	  0x00000000
+	 		| SUPPLIMENTARY ADDRESS-2	= 0x00000000
+	 		| 			    	  0x00000000
+	 		| SUPPLIMENTARY ADDRESS-3	= 0x00000000
+	 		| 			    	  0x00000000
+	 		| TX MAC SOURCE ADDRESS  	= 0x00000000

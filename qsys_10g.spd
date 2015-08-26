@@ -1,0 +1,1630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_loopback_composed_mm_interconnect_0_rsp_xbar_mux.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_loopback_composed_mm_interconnect_0_rsp_xbar_demux.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_demux" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_loopback_composed_mm_interconnect_0_cmd_xbar_mux.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_loopback_composed_mm_interconnect_0_cmd_xbar_demux.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_demux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_loopback_composed_mm_interconnect_0_id_router.sv"
+   type="SYSTEM_VERILOG"
+   library="id_router" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_loopback_composed_mm_interconnect_0_addr_router.sv"
+   type="SYSTEM_VERILOG"
+   library="addr_router" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_2_rsp_xbar_mux.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_2_rsp_xbar_demux.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_demux" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_2_cmd_xbar_mux.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_2_cmd_xbar_demux.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_demux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_2_id_router.sv"
+   type="SYSTEM_VERILOG"
+   library="id_router" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_2_addr_router.sv"
+   type="SYSTEM_VERILOG"
+   library="addr_router" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_1_rsp_xbar_mux.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_1_rsp_xbar_demux.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_demux" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_1_cmd_xbar_mux.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_1_cmd_xbar_demux.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_demux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_1_id_router.sv"
+   type="SYSTEM_VERILOG"
+   library="id_router" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_1_addr_router.sv"
+   type="SYSTEM_VERILOG"
+   library="addr_router" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_0_rsp_xbar_mux.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_0_rsp_xbar_demux.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_demux" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_0_cmd_xbar_mux.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_0_cmd_xbar_demux.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_demux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_0_id_router.sv"
+   type="SYSTEM_VERILOG"
+   library="id_router" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_0_addr_router.sv"
+   type="SYSTEM_VERILOG"
+   library="addr_router" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_handshake_clock_crosser.v"
+   type="SYSTEM_VERILOG"
+   library="crosser" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_clock_crosser.v"
+   type="SYSTEM_VERILOG"
+   library="crosser" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_pipeline_base.v"
+   type="SYSTEM_VERILOG"
+   library="crosser" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_mm_interconnect_0_rsp_xbar_mux.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_mm_interconnect_0_rsp_xbar_demux.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_demux" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_mm_interconnect_0_cmd_xbar_mux.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_mm_interconnect_0_cmd_xbar_demux.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_demux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_mm_interconnect_0_id_router.sv"
+   type="SYSTEM_VERILOG"
+   library="id_router" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_mm_interconnect_0_addr_router.sv"
+   type="SYSTEM_VERILOG"
+   library="addr_router" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_loopback_composed_mm_interconnect_0.v"
+   type="VERILOG"
+   library="mm_interconnect_0" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_loopback_composed_lc_lb_timing_adapter.v"
+   type="VERILOG"
+   library="lc_lb_timing_adapter" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_loopback_composed_line_splitter_timing_adapter.v"
+   type="VERILOG"
+   library="line_splitter_timing_adapter" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_loopback_composed_line_lb_timing_adapter.v"
+   type="VERILOG"
+   library="line_lb_timing_adapter" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_eth_loopback.v"
+   type="VERILOG"
+   library="line_loopback" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_loopback_composed_lc_splitter_timing_adapter.v"
+   type="VERILOG"
+   library="lc_splitter_timing_adapter" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_2.v"
+   type="VERILOG"
+   library="mm_interconnect_2" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_1.v"
+   type="VERILOG"
+   library="mm_interconnect_1" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_mm_interconnect_0.v"
+   type="VERILOG"
+   library="mm_interconnect_0" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_rxtx_timing_adapter_pauselen_tx.v"
+   type="VERILOG"
+   library="rxtx_timing_adapter_pauselen_tx" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_rxtx_timing_adapter_pauselen_rx.v"
+   type="VERILOG"
+   library="rxtx_timing_adapter_pauselen_rx" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_txrx_timing_adapter_link_fault_status_export.v"
+   type="VERILOG"
+   library="txrx_timing_adapter_link_fault_status_export" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_txrx_timing_adapter_link_fault_status_rx.v"
+   type="VERILOG"
+   library="txrx_timing_adapter_link_fault_status_rx" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_rx_st_error_adapter_stat.v"
+   type="VERILOG"
+   library="rx_st_error_adapter_stat" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_packet_overflow_control.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_eth_packet_overflow_control"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_packet_overflow_control.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_eth_packet_overflow_control"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_crc_pad_rem.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_eth_crc_pad_rem"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_crc_rem.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_eth_crc_pad_rem"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_packet_stripper.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_eth_crc_pad_rem"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_crc_pad_rem.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_eth_crc_pad_rem"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_crc_rem.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_eth_crc_pad_rem"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_packet_stripper.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_eth_crc_pad_rem"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_pipeline_stage.sv"
+   type="SYSTEM_VERILOG"
+   library="rx_eth_crc_pad_rem" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_pipeline_base.v"
+   type="VERILOG"
+   library="rx_eth_crc_pad_rem" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_frame_status_merger.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_eth_frame_status_merger"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_frame_status_merger.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_eth_frame_status_merger"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_rx_timing_adapter_frame_status_out_frame_decoder.v"
+   type="VERILOG"
+   library="rx_timing_adapter_frame_status_out_frame_decoder" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_rx_st_timing_adapter_frame_status_in.v"
+   type="VERILOG"
+   library="rx_st_timing_adapter_frame_status_in" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_lane_decoder.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_eth_lane_decoder"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_lane_decoder.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_eth_lane_decoder"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_link_fault_detection.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_eth_link_fault_detection"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_link_fault_detection.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_eth_link_fault_detection"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_10g_rx_register_map.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_register_map"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_10g_rx_register_map.v"
+   type="VERILOG_ENCRYPT"
+   library="rx_register_map"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_clock_crosser.v"
+   type="VERILOG"
+   library="rx_register_map" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_link_fault_generation.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_link_fault_generation"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_link_fault_generation.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_link_fault_generation"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_tx_st_timing_adapter_splitter_out_0.v"
+   type="VERILOG"
+   library="tx_st_timing_adapter_splitter_out_0" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_tx_st_timing_adapter_splitter_in.v"
+   type="VERILOG"
+   library="tx_st_timing_adapter_splitter_in" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_xgmii_termination.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_xgmii_termination"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_xgmii_termination.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_xgmii_termination"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_packet_formatter.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_packet_formatter"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_packet_formatter.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_packet_formatter"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_delay.sv"
+   type="SYSTEM_VERILOG"
+   library="tx_st_status_output_delay_to_statistic" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_10gmem_statistics_collector.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_statistics_collector"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_10gmem_statistics_collector.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_statistics_collector"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_tx_st_timing_adapter_splitter_status_output.v"
+   type="VERILOG"
+   library="tx_st_timing_adapter_splitter_status_output" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_tx_st_timing_adapter_splitter_status_in.v"
+   type="VERILOG"
+   library="tx_st_timing_adapter_splitter_status_in" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_tx_st_error_adapter_stat.v"
+   type="VERILOG"
+   library="tx_st_error_adapter_stat" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_frame_decoder.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_frame_decoder"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_frame_decoder.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_frame_decoder"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_pipeline_stage.sv"
+   type="SYSTEM_VERILOG"
+   library="tx_eth_frame_decoder" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_pipeline_base.v"
+   type="VERILOG"
+   library="tx_eth_frame_decoder" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_tx_st_timing_adapter_frame_decoder.v"
+   type="VERILOG"
+   library="tx_st_timing_adapter_frame_decoder" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_splitter.sv"
+   type="SYSTEM_VERILOG"
+   library="tx_st_splitter_1" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_pipeline_stage.sv"
+   type="SYSTEM_VERILOG"
+   library="tx_st_pipeline_stage_rs" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_pipeline_base.v"
+   type="SYSTEM_VERILOG"
+   library="tx_st_pipeline_stage_rs" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_crc.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_crc_inserter"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/crc32.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_crc_inserter"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/gf_mult32_kc.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_crc_inserter"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_crc.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_crc_inserter"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/crc32.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_crc_inserter"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/gf_mult32_kc.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_crc_inserter"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_address_inserter.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_address_inserter"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_address_inserter.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_address_inserter"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_tx_st_mux_flow_control_user_frame.v"
+   type="VERILOG"
+   library="tx_st_mux_flow_control_user_frame" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac_tx_st_pause_ctrl_error_adapter.v"
+   type="VERILOG"
+   library="tx_st_pause_ctrl_error_adapter" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_pause_ctrl_gen.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_pause_ctrl_gen"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_pause_controller.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_pause_ctrl_gen"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_pause_gen.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_pause_ctrl_gen"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_pause_ctrl_gen.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_pause_ctrl_gen"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_pause_controller.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_pause_ctrl_gen"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_pause_gen.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_pause_ctrl_gen"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_pause_beat_conversion.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_pause_beat_conversion"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_pause_beat_conversion.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_pause_beat_conversion"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_pkt_backpressure_control.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_pkt_backpressure_control"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_pkt_backpressure_control.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_pkt_backpressure_control"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_pad_inserter.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_pad_inserter"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_pad_inserter.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_pad_inserter"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_packet_underflow_control.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_packet_underflow_control"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_packet_underflow_control.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_eth_packet_underflow_control"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_eth_10g_tx_register_map.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_register_map"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_eth_10g_tx_register_map.v"
+   type="VERILOG_ENCRYPT"
+   library="tx_register_map"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_clock_crosser.v"
+   type="VERILOG"
+   library="tx_register_map" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_mm_bridge.v"
+   type="VERILOG"
+   library="tx_bridge" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_mm_interconnect_0_rsp_xbar_mux.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_mm_interconnect_0_rsp_xbar_demux.sv"
+   type="SYSTEM_VERILOG"
+   library="rsp_xbar_demux" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_arbitrator.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_mm_interconnect_0_cmd_xbar_mux.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_mux" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_mm_interconnect_0_cmd_xbar_demux.sv"
+   type="SYSTEM_VERILOG"
+   library="cmd_xbar_demux" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_burst_adapter.sv"
+   type="SYSTEM_VERILOG"
+   library="burst_adapter" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_address_alignment.sv"
+   type="SYSTEM_VERILOG"
+   library="burst_adapter" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_traffic_limiter.sv"
+   type="SYSTEM_VERILOG"
+   library="limiter" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_reorder_memory.sv"
+   type="SYSTEM_VERILOG"
+   library="limiter" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_sc_fifo.v"
+   type="SYSTEM_VERILOG"
+   library="limiter" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_pipeline_base.v"
+   type="SYSTEM_VERILOG"
+   library="limiter" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_mm_interconnect_0_id_router.sv"
+   type="SYSTEM_VERILOG"
+   library="id_router" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_mm_interconnect_0_addr_router.sv"
+   type="SYSTEM_VERILOG"
+   library="addr_router" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_slave_agent.sv"
+   type="SYSTEM_VERILOG"
+   library="eth_10g_design_example_0_mm_pipeline_bridge_translator_avalon_universal_slave_0_agent" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_burst_uncompressor.sv"
+   type="SYSTEM_VERILOG"
+   library="eth_10g_design_example_0_mm_pipeline_bridge_translator_avalon_universal_slave_0_agent" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_master_agent.sv"
+   type="SYSTEM_VERILOG"
+   library="merlin_master_translator_0_avalon_universal_master_0_translator_avalon_universal_master_0_agent" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_slave_translator.sv"
+   type="SYSTEM_VERILOG"
+   library="eth_10g_design_example_0_mm_pipeline_bridge_translator" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_mm_interconnect_0.v"
+   type="VERILOG"
+   library="mm_interconnect_0" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_eth_mdio.v"
+   type="VERILOG"
+   library="eth_mdio" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_eth_fifo_pause_ctrl_adapter.v"
+   type="VERILOG"
+   library="eth_fifo_pause_ctrl_adapter" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_pa_pg_after_timing_adapter.v"
+   type="VERILOG"
+   library="pa_pg_after_timing_adapter" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_pa_pg_before_timing_adapter.v"
+   type="VERILOG"
+   library="pa_pg_before_timing_adapter" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_dc_fifo.v"
+   type="VERILOG"
+   library="dc_fifo_pause_adapt_pause_gen" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_dcfifo_synchronizer_bundle.v"
+   type="VERILOG"
+   library="dc_fifo_pause_adapt_pause_gen" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_sc_fifo.v"
+   type="VERILOG"
+   library="tx_sc_fifo" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_loopback_composed.v"
+   type="VERILOG"
+   library="eth_loopback_composed" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0_eth_10g_mac.v"
+   type="VERILOG"
+   library="eth_10g_mac" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_xcvr_functions.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_xcvr_functions.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/alt_reset_ctrl_lego.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/alt_reset_ctrl_tgx_cdrauto.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/alt_xcvr_resync.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/alt_reset_ctrl_lego.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/alt_reset_ctrl_tgx_cdrauto.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/alt_xcvr_resync.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/alt_xcvr_csr_common_h.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/alt_xcvr_csr_common.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/alt_xcvr_csr_pcs8g_h.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/alt_xcvr_csr_pcs8g.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/alt_xcvr_csr_selector.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/alt_xcvr_mgmt2dec.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_wait_generate.v"
+   type="VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/alt_xcvr_csr_common_h.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/alt_xcvr_csr_common.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/alt_xcvr_csr_pcs8g_h.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/alt_xcvr_csr_pcs8g.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/alt_xcvr_csr_selector.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/alt_xcvr_mgmt2dec.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_wait_generate.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_handshake_clock_crosser.v"
+   type="VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_avalon_st_handshake_clock_crosser.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_clock_crosser.v"
+   type="VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_avalon_st_clock_crosser.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_pipeline_stage.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_avalon_st_pipeline_stage.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_avalon_st_pipeline_base.v"
+   type="VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_avalon_st_pipeline_base.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/alt_10gbaser_pcs.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_params.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_async_fifo_fpga.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_bitsync.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_bitsync2.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_clockcomp.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_clk_ctrl.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_gearbox_exp.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_gearbox_red.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_pcs_10g.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_pcs_10g_top.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_reg_map_av.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_rx_fifo.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_rx_fifo_wrap.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_rx_top.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_tx_top.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/alt_10gbaser_pcs.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_params.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_async_fifo_fpga.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_bitsync.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_bitsync2.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_clockcomp.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_clk_ctrl.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_gearbox_exp.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_gearbox_red.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_pcs_10g.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_pcs_10g_top.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_reg_map_av.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_rx_fifo.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_rx_fifo_wrap.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_rx_top.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_tx_top.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_1588_latency.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_ber.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_ber_cnt_ns.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_ber_sm.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_blksync.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_blksync_datapath.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_decode.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_decode_type.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_descramble.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_encode.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_encode_type.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_lock_sm.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_nto1mux.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_prbs_gen_xg.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_prbs_ver_xg.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_random_err_cnt_ns.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_random_gen.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_random_ver.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_random_ver_10g.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_register_with_byte_enable.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_rx_sm_datapath.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_rx_sm_ns.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_scramble.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_square_wave_gen.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_tx_sm_datapath.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_tx_sm_ns.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_10gbaser_phy_word_align.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_1588_latency.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_ber.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_ber_cnt_ns.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_ber_sm.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_blksync.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_blksync_datapath.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_decode.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_decode_type.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_descramble.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_encode.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_encode_type.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_lock_sm.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_nto1mux.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_prbs_gen_xg.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_prbs_ver_xg.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_random_err_cnt_ns.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_random_gen.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_random_ver.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_random_ver_10g.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_register_with_byte_enable.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_rx_sm_datapath.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_rx_sm_ns.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_scramble.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_square_wave_gen.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_tx_sm_datapath.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_tx_sm_ns.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec/altera_10gbaser_phy_word_align.v"
+   type="VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="riviera" />
+ <file
+   path="qsys_10g/simulation/submodules/csr_pcs10gbaser_h.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/csr_pcs10gbaser.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/csr_pcs10gbaser_h.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/csr_pcs10gbaser.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/sv_reconfig_bundle_to_xcvr.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/sv_reconfig_bundle_to_ip.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/sv_reconfig_bundle_merger.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/sv_reconfig_bundle_to_xcvr.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/sv_reconfig_bundle_to_ip.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/sv_reconfig_bundle_merger.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/av_xcvr_h.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_xcvr_avmm_csr.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_tx_pma_ch.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_tx_pma.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_rx_pma.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_pma.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_pcs_ch.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_pcs.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_xcvr_avmm.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_xcvr_native.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_xcvr_plls.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_xcvr_data_adapter.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_reconfig_bundle_to_basic.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_reconfig_bundle_to_xcvr.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_xcvr_h.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_xcvr_avmm_csr.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_tx_pma_ch.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_tx_pma.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_rx_pma.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_pma.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_pcs_ch.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_pcs.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_xcvr_avmm.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_xcvr_native.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_xcvr_plls.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_xcvr_data_adapter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_reconfig_bundle_to_basic.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_reconfig_bundle_to_xcvr.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/av_hssi_8g_rx_pcs_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_hssi_8g_tx_pcs_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_hssi_common_pcs_pma_interface_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_hssi_common_pld_pcs_interface_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_hssi_pipe_gen1_2_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_hssi_rx_pcs_pma_interface_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_hssi_rx_pld_pcs_interface_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_hssi_tx_pcs_pma_interface_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_hssi_tx_pld_pcs_interface_rbc.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_hssi_8g_rx_pcs_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_hssi_8g_tx_pcs_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_hssi_common_pcs_pma_interface_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_hssi_common_pld_pcs_interface_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_hssi_pipe_gen1_2_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_hssi_rx_pcs_pma_interface_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_hssi_rx_pld_pcs_interface_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_hssi_tx_pcs_pma_interface_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_hssi_tx_pld_pcs_interface_rbc.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/av_xcvr_10gbaser_nr.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/av_xcvr_10gbaser_native.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_xcvr_10gbaser_nr.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/av_xcvr_10gbaser_native.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_xcvr_native_av_functions_h.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_xcvr_native_av.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_xcvr_native_av_functions_h.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_xcvr_native_av.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_xcvr_10gbaser.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_xcvr_10gbaser.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_xcvr_reset_control.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/alt_xcvr_reset_counter.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/altera_xcvr_reset_control.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/alt_xcvr_reset_counter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/alt_xcvr_arbiter.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/alt_xcvr_m2s.sv"
+   type="SYSTEM_VERILOG"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/alt_xcvr_arbiter.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor/alt_xcvr_m2s.sv"
+   type="SYSTEM_VERILOG_ENCRYPT"
+   library="altera_10gbaser"
+   simulator="modelsim" />
+ <file
+   path="qsys_10g/simulation/submodules/plain_files.txt"
+   type="OTHER"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/mentor_files.txt"
+   type="OTHER"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/cadence_files.txt"
+   type="OTHER"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/synopsys_files.txt"
+   type="OTHER"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/aldec_files.txt"
+   type="OTHER"
+   library="altera_10gbaser" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_reset_controller.v"
+   type="VERILOG"
+   library="rst_controller" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_reset_synchronizer.v"
+   type="VERILOG"
+   library="rst_controller" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_reset_controller.sdc"
+   type="SDC"
+   library="rst_controller" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_mm_interconnect_0.v"
+   type="VERILOG"
+   library="mm_interconnect_0" />
+ <file
+   path="qsys_10g/simulation/submodules/altera_merlin_master_translator.sv"
+   type="SYSTEM_VERILOG"
+   library="merlin_master_translator_0" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_eth_10g_design_example_0.v"
+   type="VERILOG"
+   library="eth_10g_design_example_0" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_button_pio.v"
+   type="VERILOG"
+   library="button_pio" />
+ <file
+   path="qsys_10g/simulation/submodules/qsys_10g_led_pio.v"
+   type="VERILOG"
+   library="led_pio" />
+ <file path="qsys_10g/simulation/qsys_10g.v" type="VERILOG" />
+ <topLevel name="qsys_10g" />
+ <deviceFamily name="arriav" />
+</simPackage>
